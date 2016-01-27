@@ -6,7 +6,7 @@ Ayo2016
 * 分4步：
     * 在main目录创建你的专属目录，以java_开头，如java_snowy，表示这是snowy的个人目录
     * 在模块的build.gradle下注册你的目录：
-```java
+
 sourceSets {
     main {
         jniLibs.srcDirs = ['libs']
@@ -19,7 +19,7 @@ sourceSets {
                         'src/main/java_snowy',
                         'src/main/lib_particle']
     }
-```
+
     * 配置你的笔记入口：在Config类中搜`菜单1：笔记`，配置你自己的page和菜单列表
     * 开始写你的代码
         * 如果要使用Activity代理框架，请移步：[Activity代理框架](./doc/doc-ayoview-acagent.md)
