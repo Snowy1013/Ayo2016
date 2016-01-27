@@ -21,7 +21,7 @@ public class App extends Application{
         app = this;
 
         //初始化Genius SDK
-        Ayo.init(this, "ayo", false, true);
+        Ayo.init(this, "ayo", true, true);
         Ayo.debug = true;
         AyoViewLib.init(this);
 
