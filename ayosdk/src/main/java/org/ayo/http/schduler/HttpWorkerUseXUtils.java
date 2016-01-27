@@ -6,6 +6,7 @@ import org.ayo.http.SBRequest;
 import org.ayo.http.callback.BaseHttpCallback;
 import org.ayo.http.callback.BaseResponseHandler;
 import org.ayo.http.callback.FailRespnseModel;
+import org.ayo.jlog.JLog;
 import org.xutils.common.Callback;
 import org.xutils.http.HttpMethod;
 import org.xutils.http.RequestParams;
@@ -125,7 +126,13 @@ public class HttpWorkerUseXUtils implements HttpWorker{
 
 			@Override
 			public void onSuccess(String result) {
-				LogInner.print("请求结果(" + request.flag + "): \n" + result);
+				//LogInner.print("请求结果(" + request.flag + "): \n" + result);
+				JLog.json("请求结果(" + request.flag + ")", result);
+				JLog.v("aaaa-v-请求over");
+				JLog.d("aaaa-d-请求over");
+				JLog.i("aaaa-i-请求over");
+				JLog.e("aaaa-e-请求over");
+				JLog.wtf("aaaa-wtf-请求over");
 				UniversalHttpResponse resp = new UniversalHttpResponse();
 				resp.code = 200;
 				resp.data = result;

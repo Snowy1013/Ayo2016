@@ -10,9 +10,6 @@ import com.cowthan.sample.menu.Menu;
 import com.cowthan.sample.widget.CustomRadioGroup;
 import com.cowthan.sample.widget.TitleBar;
 
-import org.ayo.Ayo;
-import org.ayo.app.AyoViewLib;
-
 import java.util.ArrayList;
 
 
@@ -49,8 +46,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
 		initContentView();
 
-		Ayo.init(getApplication(), "hah");
-		AyoViewLib.init(this);
+
 	}
 	
 	private TitleBar.Callback titlebarCallback = new TitleBar.Callback() {

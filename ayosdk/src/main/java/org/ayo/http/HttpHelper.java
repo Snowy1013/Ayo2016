@@ -4,19 +4,7 @@ import org.ayo.LogInner;
 import org.ayo.lang.Lists;
 import org.ayo.lang.OnWalk;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 
 public class HttpHelper {
@@ -171,9 +159,10 @@ public class HttpHelper {
     		Lists.each(map.keySet(), new OnWalk<String>() {
     			
 				@Override
-				public void process(int index, String t, int total) {
+				public boolean process(int index, String t, int total) {
     				String value = map.get(t)+"";
     				LogInner.debug(t + "==>" + value);
+					return false;
 				}
     		});
 		} catch (Exception e) {

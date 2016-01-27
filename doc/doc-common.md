@@ -7,7 +7,6 @@
     * 安卓系统Intent
     * 手机信息访问
     * App信息访问
-    * 随机数
     * 日期工具类
     * IP地址
 
@@ -31,11 +30,11 @@ Lang.count(List或者数组，或者String)
 ```
 
 ##3 equals和toString
-
+```java
 Lang.equals(o1, o2)
 Lang.toString(o1)
 Lang.equalsIgnoreCase(String, String)
-
+```
 ##4 snull方法：String为null时的替换
 
 ```java
@@ -151,6 +150,7 @@ List<String> list = String.split(较长字符串, 一个元素最长多少);  //
 
 Phone类代表当前手机，提供了对手机的访问
 
+```java
 Phone.isEmulator(); //是否模拟器
 Phone.getPhoneNumber(); //得到手机号，一般得不到
 Phone.getCpuInfo(); //得到当前cpu信息
@@ -158,15 +158,16 @@ Phone.getDeviceId(); //综合多种方式得到一个唯一的设备ID
 Phone.getAccesstype(); //得到当前联网方式
 Phone.getMac(); //得到Mac地址，需要权限：ACCESS_WIFI_STATE
 Phone.getLocAddress(); //得到当前IP地址，可能不是真正的网卡IP
-
+```
 ##10 当前APP幻象：TheApp
-
+```java
 TheApp类代表当前应用，提供了对应用的访问
 TheApp.getAppVersionName(); //得到版本名
 TheApp.getAppVersionCode(); //得到版本号
 TheApp.isServiceRunning(Service的class); //查看指定service是否在运行
-
+```
 __怎么知道当前app是否进入了后台？__
+
 本来看到一个库，说是五种方法判断程序进入前台还是后台，但试了试，怎么这么卡呢
 https://github.com/wenmingvs/AndroidProcess
 
@@ -183,6 +184,18 @@ https://github.com/wenmingvs/AndroidProcess
 List<Bean> list = JsonUtils.getBeanList(json, Bean.class);
 Bean bean = JsonUtils.getBean(json, Bean.class);
 ```
+
+###11 安卓提供的Intent和Content，Receiver等： SystemIntent和OS类
+
+打开相机，打开设置，打电话，打开浏览器等，暂时不整理了，因为：
+__这个类是要是删除的，因为现在对外接口不够友好，但因为之前代码还有用，所以暂时留着__
+
+
+要作为代替的类是：OS，表示当前系统，请优先使用这个
+
+
+
+
 
 ##8 其他
 

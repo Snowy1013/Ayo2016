@@ -188,5 +188,5 @@ View view = LayoutInflater.from(context).inflate(R.layout.thing, null);
 TextView firstName = ButterKnife.findById(view, R.id.first_name);
 TextView lastName = ButterKnife.findById(view, R.id.last_name);
 ImageView photo = ButterKnife.findById(view, R.id.photo);
-Add a static import for ButterKnife.findById and enjoy even more fun.
+//Add a static import for ButterKnife.findById and enjoy even more fun.
 ```

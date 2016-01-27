@@ -6,6 +6,7 @@ import org.ayo.Ayo;
 import org.ayo.CrashHandler;
 import org.ayo.Logger;
 import org.ayo.VanGogh;
+import org.ayo.app.AyoViewLib;
 
 /**
  * Created by cowthan on 2016/1/24.
@@ -20,8 +21,9 @@ public class App extends Application{
         app = this;
 
         //初始化Genius SDK
-        Ayo.init(this, "ayo");
+        Ayo.init(this, "ayo", false, true);
         Ayo.debug = true;
+        AyoViewLib.init(this);
 
         //初始化日志类
         Logger.init(Logger.DEBUG);
