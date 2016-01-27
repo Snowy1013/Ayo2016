@@ -1,25 +1,7 @@
 package org.ayo.lang;
 
-import org.ayo.Ayo;
-import org.ayo.Configer;
-
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.net.InetAddress;
-import java.net.NetworkInterface;
-import java.net.SocketException;
-import java.util.Enumeration;
-import java.util.List;
-import java.util.UUID;
-
-
 import android.annotation.SuppressLint;
-import android.app.ActivityManager;
-import android.app.ActivityManager.RunningServiceInfo;
 import android.content.Context;
-import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -31,6 +13,19 @@ import android.provider.Settings.Secure;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.Log;
+
+import org.ayo.Ayo;
+import org.ayo.Configer;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.net.SocketException;
+import java.util.Enumeration;
+import java.util.UUID;
 
 public class Phone {
 	
@@ -49,8 +44,8 @@ public class Phone {
     /**
      * get the phone number, always fail
      */
-    public static String getPhoneNumber(Context context) {
-        TelephonyManager tManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+    public static String getPhoneNumber() {
+        TelephonyManager tManager = (TelephonyManager) Ayo.context.getSystemService(Context.TELEPHONY_SERVICE);
         String number = tManager.getLine1Number();
         Log.e(TAG, "the phone number is: " + number);
         return number;
@@ -161,13 +156,11 @@ public class Phone {
 	
 	/**
      *
-     * @param mContext
      */
-    public static String getMac(Context mContext) {
-        // TODO Auto-generated method stub
+    public static String getMac() {
         String mac = null;
         try {
-            WifiManager localWifiManager = (WifiManager) mContext.getSystemService(Context.WIFI_SERVICE); //"wifi");
+            WifiManager localWifiManager = (WifiManager) Ayo.context.getSystemService(Context.WIFI_SERVICE); //"wifi");
             WifiInfo localWifiInfo = localWifiManager.getConnectionInfo();
             mac = localWifiInfo.getMacAddress();
         } catch (Exception localException) {

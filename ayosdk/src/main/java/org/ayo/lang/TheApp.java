@@ -45,13 +45,11 @@ public class TheApp {
 
     /**
      *
-     * @param context
      * @param cls
      * @return
      */
-    public static boolean isServiceRunning(Context context, Class<?> cls) {
-        ActivityManager am = (ActivityManager) context
-                .getSystemService(Context.ACTIVITY_SERVICE);
+    public static boolean isServiceRunning(Class<?> cls) {
+        ActivityManager am = (ActivityManager) Ayo.context.getSystemService(Context.ACTIVITY_SERVICE);
         List<ActivityManager.RunningServiceInfo> infos = am.getRunningServices(100);
         for (ActivityManager.RunningServiceInfo info : infos) {
             String service = info.service.getClassName();

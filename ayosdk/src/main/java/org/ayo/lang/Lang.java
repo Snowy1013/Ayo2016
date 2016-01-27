@@ -1,5 +1,8 @@
 package org.ayo.lang;
 
+import android.content.Context;
+import android.os.Vibrator;
+
 import org.ayo.Ayo;
 
 import java.io.PrintWriter;
@@ -14,9 +17,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
-
-import android.content.Context;
-import android.os.Vibrator;
 
 /**
  * common utils, like java.lang
@@ -214,7 +214,13 @@ public class Lang {
 		SimpleDateFormat sdf = new SimpleDateFormat(pattern, Locale.getDefault());
 		return sdf.format(new Date(seconds * 1000));
 	}
-	
+
+	public static String toDate(String pattern, Date date){
+		if(date == null) return "";
+		SimpleDateFormat sdf = new SimpleDateFormat(pattern, Locale.getDefault());
+		return sdf.format(date);
+	}
+
 	public static int toInt(String strInt){
 		try {
 			return Integer.parseInt(strInt);
@@ -268,9 +274,9 @@ public class Lang {
 	 *
 	 * @return
 	 */
-	public static String getTimeStamp() {
+	public static long getTimeStamp() {
 		long mili = System.currentTimeMillis();
-		return mili + "";
+		return mili;
 	}
 
 	

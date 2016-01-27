@@ -8,6 +8,6 @@ public interface OnWalk<T> {
 	 * @param t  current element
 	 * @param total list.size()
 	 */
-	void process(int index, T t, int total);
+	boolean process(int index, T t, int total);
 	
 }

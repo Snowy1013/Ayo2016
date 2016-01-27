@@ -59,6 +59,47 @@ public class Lists {
 		}
 	}
 
+	public static <T> void remove(List<T> c, OnWalk<T> callback) {
+		if (callback == null)
+			return;
+		List<T> list = Lists.clone(c);
+		if (Lang.isNotEmpty(list)) {
+			int count = 0;
+			for (T o : list) {
+				boolean willBeDelete = callback.process(count, o, c.size());
+				count++;
+				if(willBeDelete){
+					c.remove(o);
+				}
+			}
+		}
+	}
+
+	private void t(){
+		List<String> list;
+
+	}
+
+	public static <T> List<T> clone(List<T> c){
+		List<T> list = new ArrayList<T>();
+		if (Lang.isNotEmpty(c)) {
+			for (T o : c) {
+				list.add(o);
+			}
+		}
+		return list;
+	}
+
+	public static <T> List<T> clone(T[] c){
+		List<T> list = new ArrayList<T>();
+		if (Lang.isNotEmpty(c)) {
+			for (T o : c) {
+				list.add(o);
+			}
+		}
+		return list;
+	}
+
 	public static <T> Collection<T> combine(Collection<T> c1,
 			Collection<T> c2) {
 		if (c1 == null && c2 == null)
