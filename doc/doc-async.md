@@ -20,8 +20,10 @@
 ##2 android异步机制
 
 * 不说了
-    * Handler
-    * AsyncTask
+    * Handler，looper，消息队列
+    * AsyncTask对Handler和线程池的封装
+    * AsyncTask的execute可以接受一个Executor作为参数，但线程管理原则应该是什么呢，不知道
+
 
 ##3 Ayo库提供的AsyncTask和Handler封装：Aync类
 
