@@ -1,5 +1,37 @@
-所有相关文档链接：
+Ayo2016
 ========================
+
+##如何添加你的代码？
+
+* 分4步：
+    * 在main目录创建你的专属目录，以java_开头，如java_snowy，表示这是snowy的个人目录
+    * 在模块的build.gradle下注册你的目录：
+```java
+sourceSets {
+    main {
+        jniLibs.srcDirs = ['libs']
+        java.srcDirs = ['src/main/java',
+                        'src/main/java_ayosdk',
+                        'src/main/java_ayoview',
+                        'src/main/java_issues',
+                        'src/main/java_opensource',
+                        'src/main/java_seven',
+                        'src/main/java_snowy',
+                        'src/main/lib_particle']
+    }
+```
+    * 配置你的笔记入口：在Config类中搜`菜单1：笔记`，配置你自己的page和菜单列表
+    * 开始写你的代码
+        * 如果要使用Activity代理框架，请移步：[Activity代理框架](./doc/doc-ayoview-acagent.md)
+        * 如果不想用Activity代理框架，请参考org.ayo.app.orig
+        * 如果都不感兴趣，直接写你的Activity就行
+
+####
+* 务必注意：
+    * 写之前先过一遍现有的库，避免重复引入，省的干重复的事
+    * 尽量给个文档，文档目录在README.md
+
+##目录
 
 * 基础设施: `Ayo库`
     * [怎么接入你的代码中](./doc/doc-doc.md)
@@ -15,8 +47,8 @@
     * [事件总线：EventBus](./doc/doc-eventbus.md)
     * [Activity状态保存](./doc/doc-state.md)
     * [加密解密](./doc/doc-crypt.md)
-    
-    
+
+
 ####
 * UIFramework：`AyoViewLib`库
     * [Animation系列讲座](./doc/README-ayo.md)
@@ -64,5 +96,4 @@
 [git怎么用起来比较高大上？](./doc/README-2016.md)
 
 
-本项目由我和我老婆维护，这是我们能为大家奉献的最劲爆的东西了，再劲爆就犯法了
-=========================
+__本项目由我和我老婆维护，
