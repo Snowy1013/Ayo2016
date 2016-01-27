@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/draw_left_menu"
+        android:icon="@drawable/btn_tab_ico_classify"
+        android:orderInCategory="100"
+        android:title="DrawLayout" />
+</menu>

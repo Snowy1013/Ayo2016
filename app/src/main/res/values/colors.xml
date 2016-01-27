@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="common_top_bar_blue">#e600b2</color>
+
+    <color name="media_indicator_bg_pressed">#969696</color>
+    <color name="media_indicator_bg_normal">#ffffff</color>
+    <color name="text_menu1_normal">#94d8b6</color>
+    <color name="text_menu1_pressed">#6694d8b6</color>
+
+    <color name="text_menu2_normal">#ff8d84</color>
+    <color name="text_menu2_pressed">#ee7c73</color>
+
+    <color name="text_menu3_normal">#FFA6BB6E</color>
+    <color name="text_menu3_pressed">#FF95aa5d</color>
+
+    <color name="button">#FF4081</color>
+    <color name="buttonPressed">#e72061</color>
+
+    <color name="common_item_bg_normal">#f8f8f8</color>
+    <color name="common_item_bg_pressed">#e4e4e4</color>
+</resources>

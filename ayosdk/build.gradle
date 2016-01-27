@@ -1,0 +1,35 @@
+apply plugin: 'com.android.library'
+
+def siteUrl = 'http://cowthan.github.io/'
+def gitUrl = 'https://git.oschina.net/cowthan/Android2016.git'
+group = "org.ayo"
+version = "1.0.0"
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 20160119
+        versionName version
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            java.srcDirs = ['src/main/java', 'src/main/xutils', 'src/main/java_compat', 'src/main/uil', 'src/main/volly']
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:23.1.1'
+}

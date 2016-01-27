@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    >
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:padding="10dp"
+        android:text="全他妈重置" />
+
+    <Button
+        android:id="@+id/btn_insert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_below="@+id/btn_reset"
+        android:layout_marginTop="10dp"
+        android:text="插入一条" />
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_below="@+id/btn_reset"
+        android:layout_toRightOf="@+id/btn_insert"
+        android:layout_marginTop="10dp"
+        android:text="更改" />
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_below="@+id/btn_reset"
+        android:layout_toRightOf="@+id/btn_update"
+        android:layout_marginTop="10dp"
+        android:text="删除" />
+
+
+
+    <ListView
+        android:id="@+id/lv_list"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btn_delete"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        />
+
+
+</RelativeLayout>

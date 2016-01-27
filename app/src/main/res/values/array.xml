@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="imgArray">
+        <item>@mipmap/img1</item>
+        <item>@mipmap/img2</item>
+        <item>@mipmap/img3</item>
+        <item>@mipmap/img4</item>
+        <item>@mipmap/img5</item>
+        <item>@mipmap/img6</item>
+    </string-array>
+
+    <string-array name="planetArray">
+        <item>Mercury 水星</item>
+        <item>Venus 金星</item>
+        <item>Earth 地球</item>
+        <item>Mars 火星</item>
+        <item>Jupiter 木星</item>
+        <item>Saturn 土星</item>
+        <item>Uranus 天王星</item>
+        <item>Neptune 海王星</item>
+        <item>Pluto 冥王星</item>
+        <item>Pisces 双鱼座</item>
+        <item>Aquarius 水瓶座</item>
+        <item>Capricorn 摩羯座</item>
+        <item>Sagittarius 射手座</item>
+        <item>Scorpio 天蝎座</item>
+        <item>Libra 天秤座</item>
+        <item>Virgo 处女座</item>
+        <item>Gemini 双子座</item>
+        <item>Taurus 金牛座</item>
+        <item>Cancer 巨蟹座</item>
+        <item>Aries 白羊座</item>
+        <item>Aquarius 宝瓶座</item>
+    </string-array>
+</resources>
