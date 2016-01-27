@@ -9,8 +9,6 @@ import android.view.View;
 import com.cowthan.sample.menu.Menu;
 import com.cowthan.sample.menu.MenuItem;
 import com.cowthan.sample.widget.CustomRadioGroup;
-import com.cowthan.sample.widget.CustomViewPager;
-import com.cowthan.sample.widget.TitleBar;
 
 import java.util.ArrayList;
 
@@ -23,7 +21,7 @@ import java.util.ArrayList;
 public class MenuPagerFragment extends SBFragment implements View.OnClickListener{
 
 	private CustomRadioGroup footer;
-	private CustomViewPager body;
+	private ViewPager body;
 
 	private ArrayList<Fragment> fragments = new ArrayList<Fragment>();
 	private Menu menu;
@@ -54,7 +52,7 @@ public class MenuPagerFragment extends SBFragment implements View.OnClickListene
 					menu.subMenus.get(i).name);
 		}
 		// 主体
-		body = (CustomViewPager) findViewById(R.id.main_body);
+		body = (ViewPager) findViewById(R.id.main_body);
 
 		final MainBodyPageChangeListener bodyChangeListener = new MainBodyPageChangeListener(
 				footer);
@@ -73,9 +71,6 @@ public class MenuPagerFragment extends SBFragment implements View.OnClickListene
 			}
 		});
 
-		/**
-		 * BUG :显示不出数字。数字尺寸太大
-		 */
 		//footer.setItemNewsCount(1, 10);// 设置消息数量
 
 	}
@@ -83,7 +78,7 @@ public class MenuPagerFragment extends SBFragment implements View.OnClickListene
 	private void initFragments() {
 		fragments.clear();
 		if(menu.name.equals("笔记")){
-			body.setCanScroll(false);
+			//body.setCanScroll(false);
 		}
 		for(MenuItem menuItem: menu.subMenus){
 			MenuItemFragment frag1 = new MenuItemFragment();
