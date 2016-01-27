@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/frag_staticimple_title"
-        android:name="com.cowthan.sample.zfragment.StaticTitleFragment"
+        android:name="com.snowy.demo.zfragment.StaticTitleFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true" />

@@ -48,7 +48,7 @@
 
         <fragment
             android:id="@+id/fragment1"
-            android:name="com.cowthan.sample.ztmpl_listview.TmplFragment"
+            android:name="com.ayoview.sample.ztmpl_listview.TmplFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
              />

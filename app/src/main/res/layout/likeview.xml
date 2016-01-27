@@ -3,13 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.cowthan.sample.zlikeview.DotsView
+    <com.ayo.opensource.zlikeview.DotsView
         android:id="@+id/dots"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"/>
 
-    <com.cowthan.sample.zlikeview.CircleView
+    <com.ayo.opensource.zlikeview.CircleView
         android:id="@+id/circle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

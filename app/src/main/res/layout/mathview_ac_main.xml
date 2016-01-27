@@ -11,7 +11,7 @@
         android:text="Formula one: from xml with MathJax"
         android:textStyle="bold"/>
 
-    <com.cowthan.sample.zmathview.MathView
+    <com.ayo.opensource.zmathview.MathView
         android:id="@+id/formula_one"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,7 +19,7 @@
         and they are $$x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}.$$"
         auto:engine="MathJax"
         >
-    </com.cowthan.sample.zmathview.MathView>
+    </com.ayo.opensource.zmathview.MathView>
 
     <TextView
         android:layout_width="match_parent"
@@ -27,13 +27,13 @@
         android:text="Formula two: from Java String with KaTeX"
         android:textStyle="bold"/>
 
-    <com.cowthan.sample.zmathview.MathView
+    <com.ayo.opensource.zmathview.MathView
         android:id="@+id/formula_two"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         auto:engine="KaTeX"
         >
-    </com.cowthan.sample.zmathview.MathView>
+    </com.ayo.opensource.zmathview.MathView>
 
     <TextView
         android:layout_width="match_parent"
@@ -41,12 +41,12 @@
         android:text="Formula three: render MathML code with MathJax"
         android:textStyle="bold"/>
 
-    <com.cowthan.sample.zmathview.MathView
+    <com.ayo.opensource.zmathview.MathView
         android:id="@+id/formula_three"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         auto:engine="MathJax"
         >
-    </com.cowthan.sample.zmathview.MathView>
+    </com.ayo.opensource.zmathview.MathView>
 
 </LinearLayout>

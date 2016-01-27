@@ -7,7 +7,7 @@
     android:paddingBottom="6dp"
     >
 
-    <com.cowthan.sample.ziosmessage_list.iOSMessageList
+    <com.ayo.opensource.ziosmessage_list.iOSMessageList
         android:id="@+id/list"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"/>

@@ -31,7 +31,7 @@
                 android:divider="@null"
                 android:dividerHeight="0dp">
             </ListView>
-            <com.cowthan.sample.zglass_broken.MyView
+            <com.ayo.opensource.zglass_broken.MyView
                 android:id="@+id/demo_myview"
                 android:layout_width="150dp"
                 android:layout_height="160dp"

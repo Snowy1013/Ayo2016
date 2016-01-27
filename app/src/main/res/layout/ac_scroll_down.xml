@@ -14,12 +14,12 @@
         android:textSize="14sp"
         />
 
-    <com.cowthan.sample.zlayout.ScrollDownLayout
+    <com.ayo.opensource.zlayout.ScrollDownLayout
         android:id="@+id/scroll_down_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.cowthan.sample.zlayout.ContentScrollView
+        <com.ayo.opensource.zlayout.ContentScrollView
             android:id="@+id/content_scroll_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -43,9 +43,9 @@
 
             </LinearLayout>
 
-        </com.cowthan.sample.zlayout.ContentScrollView>
+        </com.ayo.opensource.zlayout.ContentScrollView>
 
-    </com.cowthan.sample.zlayout.ScrollDownLayout>
+    </com.ayo.opensource.zlayout.ScrollDownLayout>
 
 
 </FrameLayout>

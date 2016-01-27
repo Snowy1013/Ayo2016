@@ -7,7 +7,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:name=".App"
+        android:name="com.cowthan.sample.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -54,17 +54,17 @@
             android:theme="@style/AyoTransparentTheme" />
 
         <activity
-            android:name="com.cowthan.sample.zfragment.FragmentCommunActivity"
+            android:name="com.snowy.demo.zfragment.FragmentCommunActivity"
             android:theme="@style/AyoAppTheme"
             />
 
         <activity
-            android:name="com.cowthan.sample.zlayout.DemoScrollDownActivity"
+            android:name="com.ayo.opensource.zlayout.DemoScrollDownActivity"
             android:theme="@style/AyoAppTheme"
         />
 
         <activity
-            android:name="com.cowthan.sample.zviewpager.ViewPagerMainActivity"
+            android:name="com.snowy.demo.zviewpager.ViewPagerMainActivity"
             />
             <!--android:theme="@style/AyoAppTheme"-->
 

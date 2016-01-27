@@ -11,7 +11,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin">
-    <com.cowthan.sample.zbutton.AnimCheckBox
+    <com.ayoview.sample.zbutton.AnimCheckBox
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_margin="1dp"
@@ -20,7 +20,7 @@
         app:animcheckbox_stroke_color="#607D8B"
         app:animcheckbox_circle_color="#795548"/>
 
-    <com.cowthan.sample.zbutton.AnimCheckBox
+    <com.ayoview.sample.zbutton.AnimCheckBox
         android:id="@+id/checkbox_1"
         android:layout_gravity="center_horizontal"
         android:layout_width="60dp"
@@ -30,7 +30,7 @@
         app:animcheckbox_stroke_color="#9C27B0"
         app:animcheckbox_circle_color="#FFFFFF"/>
 
-    <com.cowthan.sample.zbutton.AnimCheckBox
+    <com.ayoview.sample.zbutton.AnimCheckBox
         android:layout_gravity="center_horizontal"
         android:layout_width="80dp"
         android:padding="4dp"
@@ -39,7 +39,7 @@
         app:animcheckbox_stroke_color="#2196F3"
         app:animcheckbox_circle_color="#1976D2"/>
 
-    <com.cowthan.sample.zbutton.AnimCheckBox
+    <com.ayoview.sample.zbutton.AnimCheckBox
         android:id="@+id/checkbox_2"
         android:layout_gravity="center_horizontal"
         android:layout_width="100dp"
@@ -48,7 +48,7 @@
         app:animcheckbox_stroke_width="4dp"
         app:animcheckbox_stroke_color="#009688"
         app:animcheckbox_circle_color="#4CAF50"/>
-    <com.cowthan.sample.zbutton.AnimCheckBox
+    <com.ayoview.sample.zbutton.AnimCheckBox
         android:layout_gravity="center_horizontal"
         android:layout_width="120dp"
         android:padding="6dp"

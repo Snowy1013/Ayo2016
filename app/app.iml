@@ -53,7 +53,13 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/assets" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/aidl" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/main/javaa_particle" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java_ayosdk" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java_ayoview" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java_issues" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java_opensource" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java_seven" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java_snowy" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/lib_particle" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/jni" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/rs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/res" type="java-test-resource" />

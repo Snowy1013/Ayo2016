@@ -3,8 +3,6 @@ package com.cowthan.sample;
 import android.content.Context;
 import android.util.DisplayMetrics;
 
-import com.cowthan.sample.zpartial_explode.Particle;
-
 import org.ayo.app.tmpl.ErrorReason;
 import org.ayo.http.HttpProblem;
 

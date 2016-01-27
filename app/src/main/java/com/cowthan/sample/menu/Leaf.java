@@ -1,9 +1,6 @@
 package com.cowthan.sample.menu;
 
 import android.app.Activity;
-import android.support.v4.app.Fragment;
-
-import com.cowthan.sample.SBFragment;
 
 import org.ayo.app.base.ActivityAttacher;
 
