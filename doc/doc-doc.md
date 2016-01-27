@@ -27,12 +27,12 @@ public class App extends Application{
         app = this;
 
         //初始化Genius SDK
-        Ayo.init(this, "ayo");
+        Ayo.init(this, "ayo", true, true);
         Ayo.debug = true;
+        AyoViewLib.init(this);
 
-        //初始化日志类
+        //初始化日志类：待废弃，由JLog代替
         Logger.init(Logger.DEBUG);
-
 
         //初始化网络图片加载工具类
         VanGogh.initImageBig(R.mipmap.loading_big);
@@ -47,7 +47,7 @@ public class App extends Application{
 }
 ```
 
-要访问全局上下文，可以使用`Ayo.context`
+要访问全局上下文，可以使用`App.app`或`Ayo.context`
 
 ##2 Application定义
 
