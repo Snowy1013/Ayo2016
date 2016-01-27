@@ -66,10 +66,17 @@ JLog.json(json)
     * 日志文件目录本来是传入目录名，现在改成传入全路径了
 
 
-##2 注意事项
+### 注意事项
 
 * 实践中如何配置：
     * 开发调试，开log，关文件：Ayo.init(this, "ayo", false, true);
     * 打包测试，关log，开文件：Ayo.init(this, "ayo", true, false);
     * 打包发布，关log，关文件：Ayo.init(this, "ayo", false, false);
     * 按照上述配置，日志文件在sd卡/ayo/log/下
+
+
+##2 崩溃日志
+
+
+
+##3 用户行为日志

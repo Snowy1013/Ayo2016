@@ -1,5 +1,7 @@
 package com.cowthan.sample;
 
+import com.ayo.sample.zasync.AsyncDemoActivity;
+import com.ayo.sample.zlog.JLogDemoActivity;
 import com.cowthan.sample.menu.Leaf;
 import com.cowthan.sample.menu.Menu;
 import com.cowthan.sample.menu.MenuItem;
@@ -59,14 +61,12 @@ public class Config{
                 menuItem1.addLeaf(new Leaf("缓存", "", null));
                 menuItem1.addLeaf(new Leaf("数据库", "", XUtilsDBDemoActivity.class));
                 menuItem1.addLeaf(new Leaf("控件注入", "", null));
-                menuItem1.addLeaf(new Leaf("日志系统", "", null));
+                menuItem1.addLeaf(new Leaf("日志系统", "", JLogDemoActivity.class));
                 menuItem1.addLeaf(new Leaf("io", "", null));
                 menuItem1.addLeaf(new Leaf("http", "", null));
                 menuItem1.addLeaf(new Leaf("下载文件", "", null));
                 menuItem1.addLeaf(new Leaf("上传文件", "", null));
-                menuItem1.addLeaf(new Leaf("日志", "", null));
-                menuItem1.addLeaf(new Leaf("多线程", "", null));
-                menuItem1.addLeaf(new Leaf("RxJava", "", null));
+                menuItem1.addLeaf(new Leaf("多线程和RxJava", "", AsyncDemoActivity.class));
                 menuItem1.addLeaf(new Leaf("事件总线", "", EventBusDemoActivity.class));
 
             }

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    >
+
+    <Button
+        android:id="@+id/btn_post1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:padding="10dp"
+        android:text="开启子线程" />
+
+    <Button
+        android:id="@+id/btn_post2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_post1"
+        android:layout_alignRight="@+id/btn_post1"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="开启子线程" />
+
+    <TextView
+        android:gravity="center"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:textColor="#e60012"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="结果显示"
+        android:id="@+id/tv_info"
+        android:layout_above="@+id/btn_post1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp" />
+
+
+</RelativeLayout>
