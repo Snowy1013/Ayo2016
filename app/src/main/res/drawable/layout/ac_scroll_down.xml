@@ -1,0 +1,51 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+    android:background="#ffffff"
+    >
+
+    <TextView
+        android:id="@+id/tv_aiyou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="哎呦"
+        android:gravity="center"
+        android:textSize="14sp"
+        />
+
+    <com.ayo.opensource.zlayout.ScrollDownLayout
+        android:id="@+id/scroll_down_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.ayo.opensource.zlayout.ContentScrollView
+            android:id="@+id/content_scroll_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+                </android.support.v4.view.ViewPager>
+
+                <TextView
+                    android:id="@+id/text_view"
+                    android:padding="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+        </com.ayo.opensource.zlayout.ContentScrollView>
+
+    </com.ayo.opensource.zlayout.ScrollDownLayout>
+
+
+</FrameLayout>

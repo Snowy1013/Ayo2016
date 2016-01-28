@@ -1,14 +1,5 @@
 package com.cowthan.sample;
 
-import com.ayo.sample.zasync.AsyncDemoActivity;
-import com.ayo.sample.zlog.JLogDemoActivity;
-import com.cowthan.sample.menu.Leaf;
-import com.cowthan.sample.menu.Menu;
-import com.cowthan.sample.menu.MenuItem;
-import com.ayoview.sample.zbutton.ButtonDemoActivity;
-import com.ayo.sample.zdatabase.XUtilsDBDemoActivity;
-import com.ayo.sample.zeventbus.EventBusDemoActivity;
-import com.snowy.demo.zfragment.FragmentDemoActivity;
 import com.ayo.opensource.zglass_broken.GlassBrokenMainActivity;
 import com.ayo.opensource.ziosmessage_list.IosMessageMainActivity;
 import com.ayo.opensource.zlayout.LayoutDemoActivity;
@@ -16,12 +7,22 @@ import com.ayo.opensource.zlikeview.LikeViewMainActivity;
 import com.ayo.opensource.zlikeview2.LikeView2MainActivity;
 import com.ayo.opensource.zmathview.MathViewMainActivity;
 import com.ayo.opensource.zpartial_explode.PartialExplodeMainActivity;
+import com.ayo.sample.zasync.AsyncDemoActivity;
+import com.ayo.sample.zdatabase.XUtilsDBDemoActivity;
+import com.ayo.sample.zeventbus.EventBusDemoActivity;
+import com.ayo.sample.zlog.JLogDemoActivity;
 import com.ayo.sample.zsdk.ToolkitSampleActivity;
+import com.ayoview.sample.zbutton.ButtonDemoActivity;
 import com.ayoview.sample.zsimplepromt.SvProgressHudDemoActivity;
 import com.ayoview.sample.ztextview.TextViewDemoActivity;
 import com.ayoview.sample.ztmpl_listview.TmplListActivity;
-import com.snowy.demo.zviewpager.ViewPagerDemoActivity;
+import com.cowthan.sample.menu.Leaf;
+import com.cowthan.sample.menu.Menu;
+import com.cowthan.sample.menu.MenuItem;
 import com.example.administrator.myapplication.Particle2MainActivity;
+import com.snowy.demo.zanimation.AnimationDemoActivity;
+import com.snowy.demo.zfragment.FragmentDemoActivity;
+import com.snowy.demo.zviewpager.ViewPagerDemoActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -134,6 +135,7 @@ public class Config{
             {
                 menuItem.addLeaf(new Leaf("ViewPager", "", ViewPagerDemoActivity.class));
                 menuItem.addLeaf(new Leaf("Fragment", "", FragmentDemoActivity.class));
+                menuItem.addLeaf(new Leaf("Animation", "", AnimationDemoActivity.class));
                 menuItem.addLeaf(new Leaf("控件", "", null));
                 menuItem.addLeaf(new Leaf("http", "", null));
                 menuItem.addLeaf(new Leaf("数据库", "", null));
