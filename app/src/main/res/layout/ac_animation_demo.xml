@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    >
+
+    <Button
+        android:id="@+id/btn_animat_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:padding="10dp"
+        android:text="帧动画" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="补间动画"
+        android:id="@+id/btn_animat_tween"
+        android:layout_above="@+id/btn_animat_frame"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"/>
+
+    <Button
+        android:id="@+id/btn_animat_property"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="属性动画"
+        android:layout_below="@+id/btn_animat_frame"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+
+
+</RelativeLayout>

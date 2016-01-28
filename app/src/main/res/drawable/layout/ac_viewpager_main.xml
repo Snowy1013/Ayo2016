@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/viewpager_drawlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager_main_body"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            ></android.support.v4.view.ViewPager>
+
+        <!--<ListView
+            android:id="@+id/darw_left_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:background="#ffbbff"
+            android:choiceMode="singleChoice"></ListView>-->
+
+        <!--
+        android:choiceMode  选中状态 跟itemclick没有冲突
+                none              值为0，表示无选择模式；
+                singleChoice      值为1，表示最多可以有一项被选中；
+                multipleChoice    值为2，表示可以多项被选中。
+
+        android:layout_gravity  left或right  left或start   right或end
+            表示在抽屉里的效果是从左到右还是从右到左出现
+     -->
+
+        <org.ayo.view.listview.pulltorefresh.PullToRefreshListView
+            android:id="@+id/draw_left_ptrlistview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:background="#ffbbff"
+            android:choiceMode="singleChoice"
+            android:smoothScrollbar="true">
+        </org.ayo.view.listview.pulltorefresh.PullToRefreshListView>
+
+    </android.support.v4.widget.DrawerLayout>
+</RelativeLayout>

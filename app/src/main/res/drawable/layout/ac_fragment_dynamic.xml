@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#ffe7ba">
+    android:layout_height="match_parent">
 
 
     <fragment
@@ -12,10 +11,19 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true" />
 
-    <fragment
-        android:id="@+id/frag_static_content"
-        android:name="com.snowy.demo.zfragment.StaticContentFragment"
+    <include
+        android:id="@+id/bar_bottom_frag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/bar_bottom_frag_dynamic"
+        android:layout_alignParentBottom="true" />
+
+    <FrameLayout
+        android:id="@+id/flo_frag_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/frag_staticimple_title" />
+        android:layout_below="@+id/frag_staticimple_title"
+        android:layout_above="@+id/bar_bottom_frag"/>
+
+
 </RelativeLayout>
