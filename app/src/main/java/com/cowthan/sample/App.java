@@ -28,7 +28,6 @@ public class App extends Application{
         //初始化日志类
         Logger.init(Logger.DEBUG);
 
-
         //初始化网络图片加载工具类
         VanGogh.initImageBig(R.mipmap.loading_big);
         VanGogh.initImageMiddle(R.mipmap.loading_big);

@@ -16,6 +16,7 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
+import com.nostra13.universalimageloader.core.display.CircleBitmapDisplayer;
 import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 import com.nostra13.universalimageloader.core.download.BaseImageDownloader;
 import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
@@ -65,22 +66,43 @@ public class VanGogh {
 	 * @param context
 	 */
 	public static void init(Context context){
+		DisplayImageOptions.Builder opt = new DisplayImageOptions.Builder();
+		//opt.bitmapConfig(Bitmap.Config.ALPHA_8);
+		//opt.cacheInMemory(true);
+		//opt.cacheOnDisk(true);
+		//opt.considerExifParams(true);
+		//opt.decodingOptions();- //?????
+		//opt.delayBeforeLoading(delayInMillis);
+		//opt.delayBeforeLoading(300);
+		opt.displayer(new CircleBitmapDisplayer());//CircleBitmapDisplayer, RoundedBitmapDisplayer, RoundedVignetteBitmapDisplayer, SimpleBitmapDisplayer
+		//opt.extraForDownloader(Object);
+		//opt.handler(Handler);
+		//opt.imageScaleType(ImageView.ScaleType)
+
+		//opt.preProcessor(BitmapProcessor);
+		//opt.postProcessor(BitmapProcessor);
+		//opt.resetViewBeforeLoading(true);
+		//opt.showImageOnLoading(int|Drawable);
+		//opt.showImageOnFail(int|Drawable);
+		//opt.showImageForEmptyUri(int|Drawable);
+
 		ImageLoaderConfiguration config = 
 				new ImageLoaderConfiguration.Builder(context)
-					.threadPriority(Thread.NORM_PRIORITY - 2)
-					.denyCacheImageMultipleSizesInMemory()
-					.diskCacheFileNameGenerator(new Md5FileNameGenerator())
+						.threadPriority(Thread.NORM_PRIORITY - 2)
+						.denyCacheImageMultipleSizesInMemory()
 					//.diskCacheFileNameGenerator(new SimpleFileNameGenerator())
-					.memoryCacheExtraOptions(480, 800)
-					.memoryCache(new UsingFreqLimitedMemoryCache(2 * 1024 * 1024))
-					.memoryCacheSize(2 * 1024 * 1024)
-					.diskCacheSize(50 * 1024 * 1024) // 100
-					.diskCacheFileCount(500)
-					.tasksProcessingOrder(QueueProcessingType.LIFO)
-					.writeDebugLogs() // Remove
-					.threadPoolSize(2)
-					.imageDownloader(new BaseImageDownloader(context, 5 * 1000, 30 * 1000)) // connectTimeout-5s, readTimeout-30s
-					.build();
+						.memoryCacheExtraOptions(480, 800)
+						.memoryCache(new UsingFreqLimitedMemoryCache(2 * 1024 * 1024))
+						.memoryCacheSize(2 * 1024 * 1024)
+						.diskCacheSize(50 * 1024 * 1024) // 100
+						.diskCacheFileNameGenerator(new Md5FileNameGenerator())
+						.diskCacheFileCount(500)
+						.tasksProcessingOrder(QueueProcessingType.LIFO)
+						.writeDebugLogs() // Remove
+						.threadPoolSize(2)
+						.imageDownloader(new BaseImageDownloader(context, 5 * 1000, 30 * 1000)) // connectTimeout-5s, readTimeout-30s
+						.defaultDisplayImageOptions(opt.build())
+						.build();
 		ImageLoader.getInstance().init(config);
 	}
 	
