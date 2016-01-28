@@ -67,7 +67,17 @@
             android:name="com.snowy.demo.zviewpager.ViewPagerMainActivity"
             />
             <!--android:theme="@style/AyoAppTheme"-->
+        <activity
+            android:name="com.snowy.demo.zanimation.FrameAnimateActivity"
+            />
 
+        <activity
+            android:name="com.snowy.demo.zanimation.PropertyAnimateActivity"
+            />
+
+        <activity
+            android:name="com.snowy.demo.zanimation.TweenAnimateActivity"
+            />
 
     </application>
 

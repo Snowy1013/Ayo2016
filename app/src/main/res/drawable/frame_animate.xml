@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:drawable="@drawable/fengzheng1"
+        android:duration="200"/>
+    <item android:drawable="@drawable/fengzheng2"
+        android:duration="200"/>
+    <item android:drawable="@drawable/fengzheng3"
+        android:duration="200"/>
+    <item android:drawable="@drawable/fengzheng4"
+        android:duration="200"/>
+    <item android:drawable="@drawable/fengzheng5"
+        android:duration="200"/>
+    <item android:drawable="@drawable/fengzheng6"
+        android:duration="200"/>
+    <item android:drawable="@drawable/fengzheng7"
+        android:duration="200"/>
+    <item android:drawable="@drawable/fengzheng8"
+        android:duration="200"/>
+    <item android:drawable="@drawable/fengzheng9"
+        android:duration="200"/>
+    <item android:drawable="@drawable/fengzheng10"
+        android:duration="200"/>
+    <item android:drawable="@drawable/fengzheng11"
+        android:duration="200"/>
+    <item android:drawable="@drawable/fengzheng12"
+        android:duration="200"/>
+    <item android:drawable="@drawable/fengzheng13"
+        android:duration="200"/>
+    <item android:drawable="@drawable/fengzheng14"
+        android:duration="200"/>
+    <item android:drawable="@drawable/fengzheng15"
+        android:duration="200"/>
+
+</animation-list>
