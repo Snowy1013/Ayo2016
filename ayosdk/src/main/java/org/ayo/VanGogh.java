@@ -16,7 +16,6 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
-import com.nostra13.universalimageloader.core.display.CircleBitmapDisplayer;
 import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 import com.nostra13.universalimageloader.core.download.BaseImageDownloader;
 import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
@@ -68,13 +67,13 @@ public class VanGogh {
 	public static void init(Context context){
 		DisplayImageOptions.Builder opt = new DisplayImageOptions.Builder();
 		//opt.bitmapConfig(Bitmap.Config.ALPHA_8);
-		//opt.cacheInMemory(true);
-		//opt.cacheOnDisk(true);
-		//opt.considerExifParams(true);
+		opt.cacheInMemory(true);
+		opt.cacheOnDisk(true);
+		opt.considerExifParams(true);
 		//opt.decodingOptions();- //?????
 		//opt.delayBeforeLoading(delayInMillis);
 		//opt.delayBeforeLoading(300);
-		opt.displayer(new CircleBitmapDisplayer());//CircleBitmapDisplayer, RoundedBitmapDisplayer, RoundedVignetteBitmapDisplayer, SimpleBitmapDisplayer
+		opt.displayer(new FadeInBitmapDisplayer(500));//CircleBitmapDisplayer, RoundedBitmapDisplayer, RoundedVignetteBitmapDisplayer, SimpleBitmapDisplayer
 		//opt.extraForDownloader(Object);
 		//opt.handler(Handler);
 		//opt.imageScaleType(ImageView.ScaleType)
@@ -186,9 +185,10 @@ public class VanGogh {
 	public void paint(String url, ImageLoadingListener listener, ImageLoadingProgressListener progressListener){
 		
 		options = b.cacheInMemory(true)
-				.cacheOnDisk(true)
-				.considerExifParams(true)
-				.displayer(new FadeInBitmapDisplayer(150)).build();
+				//.cacheOnDisk(true)
+				//.considerExifParams(true)
+				//.displayer(new FadeInBitmapDisplayer(1500))
+				.build();
 		
 		if(iv == null || b == null){
 			//throw new RuntimeException("Illegal Url");
