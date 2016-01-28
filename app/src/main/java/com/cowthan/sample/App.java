@@ -20,7 +20,7 @@ public class App extends Application{
         super.onCreate();
         app = this;
 
-        //初始化Genius SDK
+        //初始化Ayo SDK
         Ayo.init(this, "ayo", true, true);
         Ayo.debug = true;
         AyoViewLib.init(this);
