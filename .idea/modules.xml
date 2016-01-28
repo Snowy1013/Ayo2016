@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Android2016.iml" filepath="$PROJECT_DIR$/Android2016.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ayo2016.iml" filepath="$PROJECT_DIR$/Ayo2016.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/ayosdk/ayosdk.iml" filepath="$PROJECT_DIR$/ayosdk/ayosdk.iml" />
       <module fileurl="file://$PROJECT_DIR$/ayoview/ayoview.iml" filepath="$PROJECT_DIR$/ayoview/ayoview.iml" />
