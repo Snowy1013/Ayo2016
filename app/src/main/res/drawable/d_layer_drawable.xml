@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/animate_shower"
+        android:left="20dp"
+        android:top="20dp">
+    </item>
+    <item android:drawable="@drawable/animate_shower"
+        android:left="40dp"
+        android:top="40dp">
+    </item>
+    <item
+        android:left="60dp"
+        android:top="60dp">>
+	  <bitmap android:src="@drawable/animate_shower"
+	          android:gravity="top" />
+	</item>
+</layer-list>

@@ -7,6 +7,7 @@ import com.ayo.opensource.zlikeview.LikeViewMainActivity;
 import com.ayo.opensource.zlikeview2.LikeView2MainActivity;
 import com.ayo.opensource.zmathview.MathViewMainActivity;
 import com.ayo.opensource.zpartial_explode.PartialExplodeMainActivity;
+import com.ayo.sample.drawable.DemoDrawableActivity;
 import com.ayo.sample.zasync.AsyncDemoActivity;
 import com.ayo.sample.zdatabase.XUtilsDBDemoActivity;
 import com.ayo.sample.zeventbus.EventBusDemoActivity;
@@ -88,6 +89,7 @@ public class Config{
             MenuItem menuItem3 = new MenuItem("控件", R.drawable.weixin_normal, R.drawable.weixin_pressed);
             m1.addMenuItem(menuItem3);
             {
+                menuItem3.addLeaf(new Leaf("Drawable系列", "", DemoDrawableActivity.class));
                 menuItem3.addLeaf(new Leaf("TextView：显示系列", "", TextViewDemoActivity.class));
                 menuItem3.addLeaf(new Leaf("EditText：输入系列", "", TextViewDemoActivity.class));
                 menuItem3.addLeaf(new Leaf("Button：点击系列", "", ButtonDemoActivity.class));

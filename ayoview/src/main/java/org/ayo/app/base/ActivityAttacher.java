@@ -114,6 +114,10 @@ public abstract class ActivityAttacher implements Serializable{
         getActivity().setContentView(layoutId);
     }
 
+    public void setContentView(View view){
+        getActivity().setContentView(view);
+    }
+
     public <T extends View> T findViewById(int id){
         return (T)getActivity().findViewById(id);
     }

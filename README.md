@@ -45,7 +45,7 @@ sourceSets {
 
 ##目录
 
-* 基础设施: `Ayo库`
+* 基础设施:
     * [怎么接入你的代码中](./doc/doc-doc.md)
     * [常用工具类](./doc/doc-common.md)
     * [缓存](./doc/doc-cache.md)
@@ -62,10 +62,11 @@ sourceSets {
 
 
 ####
-* UIFramework：`AyoViewLib`库
+* UIFramework：控件
     * [Animation系列讲座](./doc/README-ayo.md)
-    * [TextView系列](./doc/README-ayo.md)
-    * [ImageView系列](./doc/README-ayo.md)
+    * [Drawable系列](./doc/v_drawable.md)
+    * [TextView系列](./doc/v_textview.md)
+    * [ImageView系列](./doc/v_imageview.md)
     * [ProgressView系列](./doc/README-ayo.md)
     * [View切换系列](./doc/README-ayo.md)
     * [表单系列](./doc/README-ayo.md)
@@ -88,24 +89,54 @@ sourceSets {
     * [其他](./doc/README-ayo.md)
 
 ####
+* 安卓res详解
+    * [res下几个目录到底怎么回事](./doc/README-2016.md)
+    * [values目录](./doc/README-2016.md)
+    * [主题和style](./doc/README-2016.md)
+    * [适配问题](./doc/README-2016.md)
+    * [资源文件切换问题：换肤](./doc/README-2016.md)
+
+####
+* 单元测试
+    * [单元测试怎么写](./doc/README-2016.md)
+
+####
 * [常见问题和代码段](./doc/README-issue.md)
     * [ScrollView嵌套ViewPager冲突](./doc/README-issue.md)
     * [ScrollView嵌套ListView或GridView](./doc/README-issue.md)
+    * [小键盘管理](./doc/README-issue.md)
+    * [三星手机拍照问题](./doc/README-issue.md)
+    * [windowIsTranslusent为true导致Activity无法横竖切换](./doc/README-issue.md)
 
 ####
-[开源项目集合](./doc/README-2016.md)
+* 基于git的work flow
+    * [git怎么用起来比较高大上？](./doc/README-2016.md)
 
 ####
-[Blog和笔记](./doc/README-2016.md)
+* 打包编译
+    * 从gradle说起
+    * 库管理，上传module的jcenter
+    * 多渠道打包
+    * 热补丁
 
 ####
-[MVP模式？](./doc/README-2016.md)
+* 杂七杂八
+    * [MVP模式](./doc/README-2016.md)
+    * [基于状态管理的复杂业务逻辑如何实现？](./doc/README-2016.md)
+
 
 ####
-[基于状态管理的复杂业务逻辑如何实现？](./doc/README-2016.md)
-
-####
-[git怎么用起来比较高大上？](./doc/README-2016.md)
-
-
-
+* 其他第三方常用库介绍
+    * 统计：友盟统计
+    * 更新：友盟自动更新
+    * 反馈：友盟反馈
+    * 第三方登录
+    * 第三方分享
+    * 七牛：图片云服务
+    * 图片选择器
+    * 自定义相机
+    * 视频播放：第三方平台依赖
+    * 视频播放：视频自己管理
+    * 录像
+    * 音频播放器
+    * 自定义app内置浏览器
