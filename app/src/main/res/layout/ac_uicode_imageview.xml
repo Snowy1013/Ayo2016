@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/all_ac_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/btn_alpha_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="增大透明度"/>
+
+        <Button
+            android:id="@+id/btn_alpha_minus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="降低透明度"
+            android:layout_marginLeft="20dp"/>
+
+        <Button
+            android:id="@+id/btn_image_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下一张"
+            android:layout_marginLeft="20dp"/>
+
+    </LinearLayout>
+    
+    <ImageView
+        android:id="@+id/img_large"
+        android:layout_width="match_parent"
+        android:layout_height="450px"
+        android:layout_margin="10dp"
+        android:scaleType="fitCenter"/>
+
+    <ImageView
+        android:id="@+id/img_small"
+        android:layout_width="150px"
+        android:layout_height="150px"
+        android:background="#ff0"
+        android:layout_margin="10dp"/>
+
+    <ZoomControls
+        android:id="@+id/zoomcontrols"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"></ZoomControls>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <QuickContactBadge
+            android:id="@+id/contactbage"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/clockmini"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="联系人"/>
+    </LinearLayout>
+
+</LinearLayout>

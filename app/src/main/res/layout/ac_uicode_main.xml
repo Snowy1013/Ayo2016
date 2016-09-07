@@ -1,0 +1,18 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.snowy.demo.zuicode.UICodeMainActivity"
+    android:background="@color/all_ac_bg">
+
+    <ListView
+        android:id="@+id/lv_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:divider="@color/all_ac_bg"
+        android:dividerHeight="10dp"
+        android:layout_margin="5dp">
+
+    </ListView>
+</RelativeLayout>

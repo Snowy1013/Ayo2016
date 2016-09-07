@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="all_ac_bg">#ffffff</color>
+
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
@@ -22,4 +24,11 @@
 
     <color name="common_item_bg_normal">#f8f8f8</color>
     <color name="common_item_bg_pressed">#e4e4e4</color>
+
+    <color name="color1">#ff0000</color>
+    <color name="color2">#00ff00</color>
+    <color name="color3">#0000ff</color>
+    <color name="color4">#ffff00</color>
+    <color name="color5">#ff00ff</color>
+    <color name="color6">#00ffff</color>
 </resources>

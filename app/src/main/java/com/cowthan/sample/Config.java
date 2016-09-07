@@ -23,6 +23,7 @@ import com.cowthan.sample.menu.MenuItem;
 import com.example.administrator.myapplication.Particle2MainActivity;
 import com.snowy.demo.zanimation.AnimationDemoActivity;
 import com.snowy.demo.zfragment.FragmentDemoActivity;
+import com.snowy.demo.zuicode.UICodeMainActivity;
 import com.snowy.demo.zviewpager.ViewPagerDemoActivity;
 
 import java.util.ArrayList;
@@ -138,7 +139,7 @@ public class Config{
                 menuItem.addLeaf(new Leaf("ViewPager", "", ViewPagerDemoActivity.class));
                 menuItem.addLeaf(new Leaf("Fragment", "", FragmentDemoActivity.class));
                 menuItem.addLeaf(new Leaf("Animation", "", AnimationDemoActivity.class));
-                menuItem.addLeaf(new Leaf("控件", "", null));
+                menuItem.addLeaf(new Leaf("控件", "", UICodeMainActivity.class));
                 menuItem.addLeaf(new Leaf("http", "", null));
                 menuItem.addLeaf(new Leaf("数据库", "", null));
             }
