@@ -2,6 +2,8 @@ package com.cowthan.sample;
 
 import android.app.Application;
 
+import com.snowy.demo.zhttp.OkHttpUtils;
+
 import org.ayo.Ayo;
 import org.ayo.CrashHandler;
 import org.ayo.Logger;
@@ -37,5 +39,8 @@ public class App extends Application{
         //初始化全局异常处理
         CrashHandler crashHandler = CrashHandler.getInstance();
         Thread.setDefaultUncaughtExceptionHandler(crashHandler);
+
+        //初始化okhttpconfig
+        OkHttpUtils.initOkHttpConfig(this);
     }
 }

@@ -79,6 +79,20 @@
             android:name="com.snowy.demo.zanimation.TweenAnimateActivity"
             />
 
+        <activity
+            android:name="com.snowy.demo.zeventbus.EventBusSecondActivity"
+            />
+
+        <activity
+            android:name="com.snowy.demo.zhttp.DownLoadFirstActivity"
+            />
+
+        <activity
+            android:name="com.snowy.demo.zhttp.DownLoadSencondActivity"
+            />
+
+        <service android:name="com.snowy.demo.zhttp.DownloadService"
+            />
     </application>
 
 </manifest>

@@ -485,7 +485,7 @@ public class HttpTask<ResultType> extends AbsTask<ResultType> implements Progres
             } catch (Throwable ignored) {
             }
         }
-        // wtf: okhttp close the inputStream be locked by BufferedInputStream#read
+        // wtf: com.snowy.okhttp close the inputStream be locked by BufferedInputStream#read
         IOUtil.closeQuietly(request);
     }
 

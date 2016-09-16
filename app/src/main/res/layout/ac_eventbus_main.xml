@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.snowy.demo.zuicode.UICodeMainActivity"
+    android:background="@color/all_ac_bg">
+
+    <Button
+        android:id="@+id/bt_eb_toSecond"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:gravity="center"
+        android:text="跳转"
+        android:textSize="14sp"
+        android:textColor="@color/all_ac_bg"
+        android:background="@drawable/sel_menu2"/>
+    <TextView
+        android:id="@+id/tv_eb_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bt_eb_toSecond"
+        android:layout_margin="10dp"
+        android:textSize="14sp"/>
+</RelativeLayout>

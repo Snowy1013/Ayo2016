@@ -26,6 +26,20 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
 	private ArrayList<Fragment> fragments = new ArrayList<Fragment>();
 
+	private TitleBar.Callback titlebarCallback = new TitleBar.Callback() {
+
+		@Override
+		public void onRightButtonClicked(int index, View v) {
+
+		}
+
+		@Override
+		public void onLeftButtonClicked(View v) {
+		}
+	};
+
+	private TitleBar titlebar;
+
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main_cw);
@@ -48,21 +62,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
 
 	}
-	
-	private TitleBar.Callback titlebarCallback = new TitleBar.Callback() {
-
-		@Override
-		public void onRightButtonClicked(int index, View v) {
-
-		}
-
-		@Override
-		public void onLeftButtonClicked(View v) {
-		}
-	};
-
-
-	private TitleBar titlebar;
 
 	public void initContentView() {
 		// 底部
