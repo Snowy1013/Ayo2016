@@ -22,6 +22,7 @@ import com.cowthan.sample.menu.Menu;
 import com.cowthan.sample.menu.MenuItem;
 import com.example.administrator.myapplication.Particle2MainActivity;
 import com.snowy.demo.zanimation.AnimationDemoActivity;
+import com.snowy.demo.zcontacts.ContactsDemoActivity;
 import com.snowy.demo.zeventbus.EventBusActivity;
 import com.snowy.demo.zfragment.FragmentDemoActivity;
 import com.snowy.demo.zhttp.HttpMainActivity;
@@ -144,6 +145,7 @@ public class Config{
                 menuItem.addLeaf(new Leaf("控件", "", UICodeMainActivity.class));
                 menuItem.addLeaf(new Leaf("EventBus", "", EventBusActivity.class));
                 menuItem.addLeaf(new Leaf("http", "", HttpMainActivity.class));
+                menuItem.addLeaf(new Leaf("通讯录", "", ContactsDemoActivity.class));
                 menuItem.addLeaf(new Leaf("数据库", "", null));
             }
 
