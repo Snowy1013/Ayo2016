@@ -76,12 +76,12 @@ public class ExpandableListViewActivity extends BaseActivity {
                 return true;
             }
 
-            private TextView getTextView(){
-                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 64);
+            private TextView getTextView(int left, int top, int right, int bottom){
+                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
                 TextView textView = new TextView(getActivity());
                 textView.setLayoutParams(lp);
                 textView.setGravity(Gravity.CENTER_VERTICAL | Gravity.LEFT);
-                textView.setPadding(36, 0, 0, 0);
+                textView.setPadding(left, top, right, bottom);
                 textView.setTextSize(20);
                 return textView;
             }
@@ -89,12 +89,14 @@ public class ExpandableListViewActivity extends BaseActivity {
             //该方法决定每个组选项的外观
             @Override
             public View getGroupView(int i, boolean b, View view, ViewGroup viewGroup) {
+                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(300, 300);
                 LinearLayout ll = new LinearLayout(getActivity());
                 ll.setOrientation(LinearLayout.HORIZONTAL);
                 ImageView logo = new ImageView(getActivity());
+                logo.setLayoutParams(lp);
                 logo.setImageResource(logos[i]);
                 ll.addView(logo);
-                TextView textView = getTextView();
+                TextView textView = getTextView(36, 0, 0, 0);
                 textView.setText(getGroup(i).toString());
                 ll.addView(textView);
                 return ll;
@@ -103,9 +105,17 @@ public class ExpandableListViewActivity extends BaseActivity {
             //该方法决定每个子选项的外观
             @Override
             public View getChildView(int i, int i1, boolean b, View view, ViewGroup viewGroup) {
-                TextView textView = getTextView();
+                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(150, 150);
+                LinearLayout ll = new LinearLayout(getActivity());
+                ll.setOrientation(LinearLayout.HORIZONTAL);
+                ImageView logo = new ImageView(getActivity());
+                logo.setLayoutParams(lp);
+                logo.setImageResource(logos[i]);
+                ll.addView(logo);
+                TextView textView = getTextView(36, 0, 0, 0);
                 textView.setText(getChild(i, i1).toString());
-                return textView;
+                ll.addView(textView);
+                return ll;
             }
 
             @Override

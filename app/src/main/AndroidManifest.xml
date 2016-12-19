@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:name="com.cowthan.sample.App"
@@ -63,12 +64,12 @@
         <activity
             android:name="com.ayo.opensource.zlayout.DemoScrollDownActivity"
             android:theme="@style/AyoAppTheme"
-        />
+            />
 
         <activity
             android:name="com.snowy.demo.zviewpager.ViewPagerMainActivity"
             />
-            <!--android:theme="@style/AyoAppTheme"-->
+        <!--android:theme="@style/AyoAppTheme"-->
         <activity
             android:name="com.snowy.demo.zanimation.FrameAnimateActivity"
             />

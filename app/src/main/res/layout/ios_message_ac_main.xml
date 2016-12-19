@@ -5,7 +5,7 @@
     android:paddingRight="6dp"
     android:paddingTop="6dp"
     android:paddingBottom="6dp"
-    >
+    android:background="@color/all_ac_bg">
 
     <com.ayo.opensource.ziosmessage_list.iOSMessageList
         android:id="@+id/list"

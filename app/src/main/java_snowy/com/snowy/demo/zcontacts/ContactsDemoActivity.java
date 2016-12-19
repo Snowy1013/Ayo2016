@@ -1,9 +1,10 @@
 package com.snowy.demo.zcontacts;
 
-import android.app.Activity;
+import android.content.ComponentName;
 import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.cowthan.sample.AyoDeviceAdminReceiver;
 import com.cowthan.sample.BaseActivity;
 import com.cowthan.sample.R;
 import com.google.gson.Gson;
@@ -37,6 +39,9 @@ public class ContactsDemoActivity extends BaseActivity implements View.OnClickLi
 
     public String TAG = "ContactsDemoActivity";
     private String bakFile = Environment.getExternalStorageDirectory() + "/ayo/bak";
+    PackageManager packageManager;
+    ComponentName componentName;
+    int res;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +50,12 @@ public class ContactsDemoActivity extends BaseActivity implements View.OnClickLi
 
         findViewById(R.id.bt_backup_contacts).setOnClickListener(this);
         findViewById(R.id.bt_recover_contacts).setOnClickListener(this);
+        findViewById(R.id.bt_hide_icon).setOnClickListener(this);
+        findViewById(R.id.bt_show_icon).setOnClickListener(this);
+
+        packageManager = getActivity().getPackageManager();
+        componentName = new ComponentName(getActivity(), AyoDeviceAdminReceiver.class);
+        res = packageManager.getComponentEnabledSetting(componentName);
     }
 
     @Override
@@ -60,6 +71,24 @@ public class ContactsDemoActivity extends BaseActivity implements View.OnClickLi
                 break;
             case R.id.bt_recover_contacts:
                 recoverContacts();
+                break;
+            case R.id.bt_hide_icon:
+                if (res == PackageManager.COMPONENT_ENABLED_STATE_DEFAULT
+                        || res == PackageManager.COMPONENT_ENABLED_STATE_ENABLED) {
+                    // 隐藏应用图标
+                    packageManager.setComponentEnabledSetting(getActivity().getComponentName(), PackageManager.COMPONENT_ENABLED_STATE_DISABLED_USER,
+                            PackageManager.DONT_KILL_APP);
+                }
+                break;
+            case R.id.bt_show_icon:
+                if (res == PackageManager.COMPONENT_ENABLED_STATE_DEFAULT
+                        || res == PackageManager.COMPONENT_ENABLED_STATE_ENABLED) {
+
+                } else {
+                    // 显示应用图标
+                    packageManager.setComponentEnabledSetting(componentName, PackageManager.COMPONENT_ENABLED_STATE_DEFAULT,
+                            PackageManager.DONT_KILL_APP);
+                }
                 break;
         }
     }

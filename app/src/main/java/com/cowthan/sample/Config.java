@@ -23,9 +23,12 @@ import com.cowthan.sample.menu.MenuItem;
 import com.example.administrator.myapplication.Particle2MainActivity;
 import com.snowy.demo.zanimation.AnimationDemoActivity;
 import com.snowy.demo.zcontacts.ContactsDemoActivity;
+import com.snowy.demo.zdesignpattern.DesignPatternActivity;
+import com.snowy.demo.zdpm.DpmActivity;
 import com.snowy.demo.zeventbus.EventBusActivity;
 import com.snowy.demo.zfragment.FragmentDemoActivity;
 import com.snowy.demo.zhttp.HttpMainActivity;
+import com.snowy.demo.zsocket.SocketDemoActivity;
 import com.snowy.demo.zuicode.UICodeMainActivity;
 import com.snowy.demo.zviewpager.ViewPagerDemoActivity;
 
@@ -64,21 +67,21 @@ public class Config{
             m1.addMenuItem(menuItem1);
             {
                 menuItem1.addLeaf(new Leaf("常用工具类", "", ToolkitSampleActivity.class));
-                menuItem1.addLeaf(new Leaf("缓存", "", null));
+//                menuItem1.addLeaf(new Leaf("缓存", "", null));
                 menuItem1.addLeaf(new Leaf("数据库", "", XUtilsDBDemoActivity.class));
-                menuItem1.addLeaf(new Leaf("控件注入", "", null));
+//                menuItem1.addLeaf(new Leaf("控件注入", "", null));
                 menuItem1.addLeaf(new Leaf("日志系统", "", JLogDemoActivity.class));
-                menuItem1.addLeaf(new Leaf("io", "", null));
-                menuItem1.addLeaf(new Leaf("http", "", null));
-                menuItem1.addLeaf(new Leaf("下载文件", "", null));
-                menuItem1.addLeaf(new Leaf("上传文件", "", null));
+//                menuItem1.addLeaf(new Leaf("io", "", null));
+//                menuItem1.addLeaf(new Leaf("http", "", null));
+//                menuItem1.addLeaf(new Leaf("下载文件", "", null));
+//                menuItem1.addLeaf(new Leaf("上传文件", "", null));
                 menuItem1.addLeaf(new Leaf("多线程和RxJava", "", AsyncDemoActivity.class));
                 menuItem1.addLeaf(new Leaf("事件总线", "", EventBusDemoActivity.class));
 
             }
 
 
-            MenuItem menuItem2 = new MenuItem("动画", R.drawable.weixin_normal, R.drawable.weixin_pressed);
+            /*MenuItem menuItem2 = new MenuItem("动画", R.drawable.weixin_normal, R.drawable.weixin_pressed);
             m1.addMenuItem(menuItem2);
             {
                 menuItem2.addLeaf(new Leaf("Tween动画", "", null));
@@ -87,7 +90,7 @@ public class Config{
                 menuItem2.addLeaf(new Leaf("Activity切换", "", null));
                 menuItem2.addLeaf(new Leaf("TypeEvaluator-缓动函数", "", null));
                 menuItem2.addLeaf(new Leaf("动效工厂", "", null));
-            }
+            }*/
 
 
             MenuItem menuItem3 = new MenuItem("控件", R.drawable.weixin_normal, R.drawable.weixin_pressed);
@@ -97,36 +100,36 @@ public class Config{
                 menuItem3.addLeaf(new Leaf("TextView：显示系列", "", TextViewDemoActivity.class));
                 menuItem3.addLeaf(new Leaf("EditText：输入系列", "", TextViewDemoActivity.class));
                 menuItem3.addLeaf(new Leaf("Button：点击系列", "", ButtonDemoActivity.class));
-                menuItem3.addLeaf(new Leaf("ImageView系列", "", null));
-                menuItem3.addLeaf(new Leaf("ProgressView系列", "", null));
-                menuItem3.addLeaf(new Leaf("View Flipper系列", "", null));
-                menuItem3.addLeaf(new Leaf("表单系列", "", null));
+//                menuItem3.addLeaf(new Leaf("ImageView系列", "", null));
+//                menuItem3.addLeaf(new Leaf("ProgressView系列", "", null));
+//                menuItem3.addLeaf(new Leaf("View Flipper系列", "", null));
+//                menuItem3.addLeaf(new Leaf("表单系列", "", null));
                 menuItem3.addLeaf(new Leaf("布局", "", LayoutDemoActivity.class));
-                menuItem3.addLeaf(new Leaf("列表", "", null));
+//                menuItem3.addLeaf(new Leaf("列表", "", null));
             }
 
             MenuItem menuItem4 = new MenuItem("提示", R.drawable.weixin_normal, R.drawable.weixin_pressed);
             m1.addMenuItem(menuItem4);
             {
                 menuItem4.addLeaf(new Leaf("简单提示框: SV系列", "", SvProgressHudDemoActivity.class));
-                menuItem4.addLeaf(new Leaf("简单提示框: Sweet系列", "", null));
-                menuItem4.addLeaf(new Leaf("提示条: Snack系列", "", null));
-                menuItem4.addLeaf(new Leaf("提示条: Toast系列", "", null));
-                menuItem4.addLeaf(new Leaf("提示条: 小黄条", "", null));
-                menuItem4.addLeaf(new Leaf("普通dialog: 动画和布局自定义", "", null));
-                menuItem4.addLeaf(new Leaf("popupwindow", "", null));
-                menuItem4.addLeaf(new Leaf("notification", "", null));
-                menuItem4.addLeaf(new Leaf("headup", "", null));
-                menuItem4.addLeaf(new Leaf("声音，led，震动，亮屏", "", null));
-                menuItem4.addLeaf(new Leaf("其他", "", null));
+//                menuItem4.addLeaf(new Leaf("简单提示框: Sweet系列", "", null));
+//                menuItem4.addLeaf(new Leaf("提示条: Snack系列", "", null));
+//                menuItem4.addLeaf(new Leaf("提示条: Toast系列", "", null));
+//                menuItem4.addLeaf(new Leaf("提示条: 小黄条", "", null));
+//                menuItem4.addLeaf(new Leaf("普通dialog: 动画和布局自定义", "", null));
+//                menuItem4.addLeaf(new Leaf("popupwindow", "", null));
+//                menuItem4.addLeaf(new Leaf("notification", "", null));
+//                menuItem4.addLeaf(new Leaf("headup", "", null));
+//                menuItem4.addLeaf(new Leaf("声音，led，震动，亮屏", "", null));
+//                menuItem4.addLeaf(new Leaf("其他", "", null));
             }
 
             MenuItem menuItem5 = new MenuItem("模板库", R.drawable.weixin_normal, R.drawable.weixin_pressed);
             m1.addMenuItem(menuItem5);
             {
-                menuItem5.addLeaf(new Leaf("Activity和Fragment基类", "", null));
+//                menuItem5.addLeaf(new Leaf("Activity和Fragment基类", "", null));
                 menuItem5.addLeaf(new Leaf("ListView和GridView模板", "", TmplListActivity.class));
-                menuItem5.addLeaf(new Leaf("界面主框架", "", null));
+//                menuItem5.addLeaf(new Leaf("界面主框架", "", null));
             }
 
         }
@@ -136,7 +139,7 @@ public class Config{
         Menu m2 = new Menu("笔记", R.drawable.contact_list_normal, R.drawable.contact_list_pressed);
         menus.add(m2);
         {
-            MenuItem menuItem = new MenuItem("snowy", R.drawable.weixin_normal, R.drawable.weixin_pressed);
+            MenuItem menuItem = new MenuItem("Android", R.drawable.weixin_normal, R.drawable.weixin_pressed);
             m2.addMenuItem(menuItem);
             {
                 menuItem.addLeaf(new Leaf("ViewPager", "", ViewPagerDemoActivity.class));
@@ -146,15 +149,17 @@ public class Config{
                 menuItem.addLeaf(new Leaf("EventBus", "", EventBusActivity.class));
                 menuItem.addLeaf(new Leaf("http", "", HttpMainActivity.class));
                 menuItem.addLeaf(new Leaf("通讯录", "", ContactsDemoActivity.class));
-                menuItem.addLeaf(new Leaf("数据库", "", null));
+                menuItem.addLeaf(new Leaf("DevicePolicyManager", "", DpmActivity.class));
+                menuItem.addLeaf(new Leaf("Socket长连接", "", SocketDemoActivity.class));
+//                menuItem.addLeaf(new Leaf("RxJava", "", RxJavaDemoActivity.class));
             }
 
-            menuItem = new MenuItem("seven", R.drawable.weixin_normal, R.drawable.weixin_pressed);
+            menuItem = new MenuItem(" Java ", R.drawable.weixin_normal, R.drawable.weixin_pressed);
             m2.addMenuItem(menuItem);
             {
-                menuItem.addLeaf(new Leaf("控件", "", null));
-                menuItem.addLeaf(new Leaf("http", "", null));
-                menuItem.addLeaf(new Leaf("数据库", "", null));
+                menuItem.addLeaf(new Leaf("设计模式", "", DesignPatternActivity.class));
+//                menuItem.addLeaf(new Leaf("http", "", null));
+//                menuItem.addLeaf(new Leaf("数据库", "", null));
             }
         }
 
@@ -172,8 +177,8 @@ public class Config{
                 menuItem.addLeaf(new Leaf("数学公式绘制", "", MathViewMainActivity.class));
                 menuItem.addLeaf(new Leaf("likeview-点击后闪亮的button--点赞", "", LikeViewMainActivity.class));
                 menuItem.addLeaf(new Leaf("likeview更高级简便版", "", LikeView2MainActivity.class));
-                menuItem.addLeaf(new Leaf("facebook rebound-弹簧阻尼器", "", LikeView2MainActivity.class));
-                menuItem.addLeaf(new Leaf("dagger", "http://itlanbao.com/code/20151210/10000/100687.html", LikeView2MainActivity.class));
+//                menuItem.addLeaf(new Leaf("facebook rebound-弹簧阻尼器", "", LikeView2MainActivity.class));
+//                menuItem.addLeaf(new Leaf("dagger", "http://itlanbao.com/code/20151210/10000/100687.html", LikeView2MainActivity.class));
             }
 
             menuItem = new MenuItem("民用级", R.drawable.weixin_normal, R.drawable.weixin_pressed);
@@ -185,7 +190,7 @@ public class Config{
         }
 
         ///--------------------------菜单1：常见问题
-        Menu m4 = new Menu("常见问题", R.drawable.profile_normal, R.drawable.profile_pressed);
+        /*Menu m4 = new Menu("常见问题", R.drawable.profile_normal, R.drawable.profile_pressed);
         menus.add(m4);
         {
             MenuItem menuItem = new MenuItem("常见问题", R.drawable.weixin_normal, R.drawable.weixin_pressed);
@@ -201,7 +206,7 @@ public class Config{
                 menuItem.addLeaf(new Leaf("selector", "", null));
                 menuItem.addLeaf(new Leaf("border", "", null));
             }
-        }
+        }*/
     }
 
 }

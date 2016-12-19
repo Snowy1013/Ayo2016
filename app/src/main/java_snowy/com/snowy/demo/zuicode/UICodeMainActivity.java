@@ -25,9 +25,7 @@ public class UICodeMainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ac_uicode_main);
         String[] itemTitles = {"跟随手指的小球", "霓虹灯效果", "时钟", "图片浏览器",
-                "瀑布流", "带预览的图片浏览器", "可展开的列表组件", "幻灯片式图片浏览器", "Android 学习",
-                "Android 学习", "Android 学习", "Android 学习", "Android 学习", "Android 学习",
-                "Android 学习", "Android 学习", "Android 学习", "Android 学习", "Android 学习"};
+                "瀑布流", "带预览的图片浏览器", "可展开的列表组件", "幻灯片式图片浏览器"};
         final Class[] classes = {DrawViewActivity.class, FrameLayoutActivity.class,
                 ClockActivity.class, ImageViewActivity.class, StreamLayoutActivity.class,
                 GridViewActivity.class, ExpandableListViewActivity.class

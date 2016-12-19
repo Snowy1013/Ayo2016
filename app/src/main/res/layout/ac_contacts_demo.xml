@@ -19,4 +19,18 @@
         android:layout_marginTop="15dp"
         android:text="恢复联系人"/>
 
+    <Button
+        android:id="@+id/bt_hide_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="隐藏图标"/>
+
+    <Button
+        android:id="@+id/bt_show_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="显示图标"/>
+
 </LinearLayout>

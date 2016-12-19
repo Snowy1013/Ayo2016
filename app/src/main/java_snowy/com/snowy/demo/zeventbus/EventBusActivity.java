@@ -44,10 +44,22 @@ public class EventBusActivity extends BaseActivity implements View.OnClickListen
         }
     }
 
+    public void onEvent(EventBean event) {
+
+        String msg = "onEvent收到了消息：" + event.getMsg();
+        Log.i("EventBusActivity", "onEvent: event msg =" + msg + "THreadId: " + android.os.Process.myTid());
+    }
+
+    public void onEventAsync(EventBean event) {
+
+        String msg = "onEventAsync收到了消息：" + event.getMsg();
+        Log.i("EventBusActivity", "onEventAsync: event msg =" + msg  + "THreadId: "+ android.os.Process.myTid());
+    }
+
     public void onEventMainThread(EventBean event) {
 
         String msg = "onEventMainThread收到了消息：" + event.getMsg();
-        Log.d("EventBusActivity", "event msg =" + msg);
+        Log.i("EventBusActivity", "onEventMainThread: event msg =" + msg + "THreadId: " + android.os.Process.myTid());
         tv_eb_msg.setText(msg);
         Toast.makeText(getActivity(), msg, Toast.LENGTH_LONG).show();
     }
