@@ -29,9 +29,6 @@ public class SocketDemoActivity extends BaseActivity {
         et_socket_ip = findViewById(R.id.et_socket_ip);
         et_socket_port = findViewById(R.id.et_socket_port);
 
-        et_socket_ip.setText("trustdata-push.chinacloudapp.cn");
-        et_socket_port.setText("8089");
-
         Button bt_socket_open = findViewById(R.id.bt_socket_open);
         bt_socket_open.setOnClickListener(new View.OnClickListener() {
             @Override
