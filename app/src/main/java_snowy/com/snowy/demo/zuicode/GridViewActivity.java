@@ -1,6 +1,5 @@
 package com.snowy.demo.zuicode;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -35,8 +34,8 @@ public class GridViewActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ac_uicode_gridview);
 
-        gv_small_images = (GridView) findViewById(R.id.gv_small_images);
-        iv_large_image = (ImageView) findViewById(R.id.iv_large_image);
+        gv_small_images = findViewById(R.id.gv_small_images);
+        iv_large_image = findViewById(R.id.iv_large_image);
 
         List<Map<String, Object>> listItems = new ArrayList<>();
         for(int i=0; i<imageIds.length; i++){

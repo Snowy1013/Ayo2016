@@ -1,4 +1,4 @@
-package com.snowy.demo.zhttp;
+package com.snowy.demo.zhttp.download;
 
 import android.app.Service;
 import android.content.Intent;
@@ -6,6 +6,7 @@ import android.os.Environment;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 
+import com.snowy.demo.zhttp.OkHttpUtils;
 import com.snowy.okhttp.download.DownLoadTask;
 import com.snowy.okhttp.download.DownloadManager;
 import com.snowy.okhttp.download.DownloadTaskListener;

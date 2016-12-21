@@ -1,6 +1,5 @@
 package com.snowy.demo.zeventbus;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -11,6 +10,7 @@ import android.widget.Toast;
 import com.cowthan.sample.BaseActivity;
 import com.cowthan.sample.R;
 
+import org.ayo.app.base.ActivityAttacher;
 import org.ayo.eventbus.EventBus;
 
 /**
@@ -37,9 +37,7 @@ public class EventBusActivity extends BaseActivity implements View.OnClickListen
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.bt_eb_toSecond:
-                Intent intent = new Intent();
-                intent.setClass(getActivity(), EventBusSecondActivity.class);
-                getActivity().startActivity(intent);
+                ActivityAttacher.startActivity(getActivity(), EventBusSecondActivity.class);
                 break;
         }
     }

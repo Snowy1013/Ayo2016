@@ -16,4 +16,17 @@
         android:textSize="14sp"
         android:textColor="@color/all_ac_bg"
         android:background="@drawable/sel_menu2"/>
+
+    <Button
+        android:id="@+id/bt_http_appstore"
+        android:text="应用商店"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bt_http_download"
+        android:padding="5dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:textColor="@color/all_ac_bg"
+        android:background="@drawable/sel_menu2"/>
 </RelativeLayout>

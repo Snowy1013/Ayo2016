@@ -1,6 +1,5 @@
 package com.snowy.demo.zuicode;
 
-import android.app.Activity;
 import android.os.Bundle;
 
 import com.cowthan.sample.BaseActivity;

@@ -1,4 +1,4 @@
-package com.snowy.demo.zhttp;
+package com.snowy.demo.zhttp.download;
 
 import java.io.File;
 

@@ -1,6 +1,5 @@
 package com.snowy.demo.zuicode;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.os.Message;
 import android.widget.TextView;
@@ -56,7 +55,7 @@ public class FrameLayoutActivity extends BaseActivity {
         setContentView(R.layout.ac_uicode_framelayout);
 
         for (int i=0; i<views.length; i++){
-            textViews[i] = (TextView) findViewById(views[i]);
+            textViews[i] = findViewById(views[i]);
         }
 
         new Timer().schedule(new TimerTask() {

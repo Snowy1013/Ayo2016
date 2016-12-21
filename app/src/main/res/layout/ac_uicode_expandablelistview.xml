@@ -8,6 +8,5 @@
     <ExpandableListView
         android:id="@+id/elv_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:childIndicator="@drawable/man"></ExpandableListView>
+        android:layout_height="wrap_content"></ExpandableListView>
 </LinearLayout>

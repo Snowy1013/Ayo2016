@@ -38,9 +38,10 @@ public class SocketClientUtils {
     /*
      * Changes: compatablie encrypt and unencrypt code;
      */
-    public static boolean sendHeartBeat(Socket socket, String uuid) {
+    public static boolean sendHeartBeat(OutputStream os, String uuid) {
+
         boolean flag = false;
-        if (!socket.isConnected()) {
+        if (os == null) {
             return false;
         }
         if (uuid == null) {
@@ -66,14 +67,13 @@ public class SocketClientUtils {
         }
         Log.i("snowy", "HeartBeat length: " + code2.length);
         try {
-            OutputStream os = socket.getOutputStream();
             os.write(code2);
             os.flush();
             flag = true;
         } catch (Exception e) {
             flag = false;
             try {
-                socket.close();
+                os.close();
             } catch (IOException e1) {
                 // TODO Auto-generated catch block
                 e1.printStackTrace();

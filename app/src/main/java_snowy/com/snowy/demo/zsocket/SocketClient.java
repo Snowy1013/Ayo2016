@@ -2,10 +2,9 @@ package com.snowy.demo.zsocket;
 
 import android.util.Log;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.net.Socket;
 
 /**
@@ -19,6 +18,10 @@ public class SocketClient extends Thread{
     private Socket socket;
     private boolean running = false;
     private long lastSendTime;
+    private OutputStream os;
+    private InputStream is;
+    private long checkDelay = 10;
+    private long keepAliveDelay = 4 * 1000;
 
     public SocketClient(String udid, String ip, int port) {
         this.udid = udid;
@@ -44,13 +47,59 @@ public class SocketClient extends Thread{
         running = true;
         boolean flag = SocketClientUtils.sendLoginMessage(socket, udid);
         Log.i("snowy", "发送登录信息是否成功：" + flag);
-        new Thread(new KeepAliveWatchDog()).start();
-        new Thread(new ReceiveWatchDog()).start();
+        while (running) {
+            if (System.currentTimeMillis() - lastSendTime > keepAliveDelay) {
+                try {
+                    if (os == null)
+                        os = socket.getOutputStream();
+                    SocketClientUtils.sendHeartBeat(os, udid);
+                    Log.i("snowy", "发送心跳包：" + udid);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    SocketClient.this.close();
+                }
+
+                lastSendTime = System.currentTimeMillis();
+            } else {
+                try {
+                    Thread.sleep(checkDelay);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                    SocketClient.this.close();
+                }
+            }
+        }
+
+        while (running) {
+            try {
+                InputStream is = socket.getInputStream();
+                if (is.available() > 0) {
+                    String receiveWorld = inputStream2String(is);
+                    Log.i("snowy", "接收到了：" + receiveWorld);
+                } else {
+                    Thread.sleep(10);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+                SocketClient.this.close();
+            }
+        }
+//        new Thread(new KeepAliveWatchDog()).start();
+//        new Thread(new ReceiveWatchDog()).start();
     }
 
     public void close() {
         if (running)
             running = false;
+    }
+
+    public String inputStream2String (InputStream in) throws IOException {
+        StringBuffer out = new StringBuffer();
+        byte[] b = new byte[4096];
+        for(int n; (n=in.read(b)) != -1;){
+            out.append(new String(b, 0, n));
+        }
+        return out.toString();
     }
 
     class KeepAliveWatchDog implements Runnable {
@@ -62,10 +111,9 @@ public class SocketClient extends Thread{
             while (running) {
                 if (System.currentTimeMillis() - lastSendTime > keepAliveDelay) {
                     try {
-//                        OutputStream os = socket.getOutputStream();
-//                        os.write(udid.getBytes());
-//                        os.flush();
-                        SocketClientUtils.sendHeartBeat(socket, udid);
+                        if (os == null)
+                            os = socket.getOutputStream();
+                        SocketClientUtils.sendHeartBeat(os, udid);
                         Log.i("snowy", "发送心跳包：" + udid);
                     } catch (Exception e) {
                         e.printStackTrace();
@@ -102,35 +150,6 @@ public class SocketClient extends Thread{
                     SocketClient.this.close();
                 }
             }
-        }
-
-        public String inputStream2String (InputStream in) throws IOException {
-            StringBuffer out = new StringBuffer();
-            byte[] b = new byte[4096];
-            for(int n; (n=in.read(b)) != -1;){
-                out.append(new String(b, 0, n));
-            }
-            return out.toString();
-        }
-
-        public String convertStreamToString(InputStream is) {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-            StringBuilder sb = new StringBuilder();
-            String line = null;
-            try {
-                while ((line = reader.readLine()) != null) {
-                    sb.append(line + "/n");
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            } finally {
-                try {
-                    is.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-            return sb.toString();
         }
     }
 }

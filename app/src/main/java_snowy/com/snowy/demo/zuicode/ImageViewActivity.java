@@ -1,6 +1,5 @@
 package com.snowy.demo.zuicode;
 
-import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
@@ -46,15 +45,15 @@ public class ImageViewActivity extends BaseActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ac_uicode_imageview);
 
-        btn_alpha_minus = (Button) findViewById(R.id.btn_alpha_minus);
-        btn_alpha_plus = (Button) findViewById(R.id.btn_alpha_plus);
-        btn_image_next = (Button) findViewById(R.id.btn_image_next);
+        btn_alpha_minus = findViewById(R.id.btn_alpha_minus);
+        btn_alpha_plus = findViewById(R.id.btn_alpha_plus);
+        btn_image_next = findViewById(R.id.btn_image_next);
 
-        img_large = (ImageView) findViewById(R.id.img_large);
-        img_small = (ImageView) findViewById(R.id.img_small);
+        img_large = findViewById(R.id.img_large);
+        img_small = findViewById(R.id.img_small);
 
-        zoomControls = (ZoomControls) findViewById(R.id.zoomcontrols);
-        contactBadge = (QuickContactBadge) findViewById(R.id.contactbage);
+        zoomControls = findViewById(R.id.zoomcontrols);
+        contactBadge = findViewById(R.id.contactbage);
 
         contactBadge.assignContactFromPhone("18518411302", false);
 

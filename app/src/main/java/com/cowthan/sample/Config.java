@@ -29,7 +29,13 @@ import com.snowy.demo.zeventbus.EventBusActivity;
 import com.snowy.demo.zfragment.FragmentDemoActivity;
 import com.snowy.demo.zhttp.HttpMainActivity;
 import com.snowy.demo.zsocket.SocketDemoActivity;
-import com.snowy.demo.zuicode.UICodeMainActivity;
+import com.snowy.demo.zuicode.ClockActivity;
+import com.snowy.demo.zuicode.DrawViewActivity;
+import com.snowy.demo.zuicode.ExpandableListViewActivity;
+import com.snowy.demo.zuicode.FrameLayoutActivity;
+import com.snowy.demo.zuicode.GridViewActivity;
+import com.snowy.demo.zuicode.ImageViewActivity;
+import com.snowy.demo.zuicode.StreamLayoutActivity;
 import com.snowy.demo.zviewpager.ViewPagerDemoActivity;
 
 import java.util.ArrayList;
@@ -106,6 +112,15 @@ public class Config{
 //                menuItem3.addLeaf(new Leaf("表单系列", "", null));
                 menuItem3.addLeaf(new Leaf("布局", "", LayoutDemoActivity.class));
 //                menuItem3.addLeaf(new Leaf("列表", "", null));
+                menuItem3.addLeaf(new Leaf("ViewPager", "", ViewPagerDemoActivity.class));
+                menuItem3.addLeaf(new Leaf("Fragment", "", FragmentDemoActivity.class));
+                menuItem3.addLeaf(new Leaf("跟随手指的小球", "", DrawViewActivity.class));
+                menuItem3.addLeaf(new Leaf("霓虹灯效果", "", FrameLayoutActivity.class));
+                menuItem3.addLeaf(new Leaf("时钟", "", ClockActivity.class));
+                menuItem3.addLeaf(new Leaf("图片浏览器", "", ImageViewActivity.class));
+                menuItem3.addLeaf(new Leaf("瀑布流", "", StreamLayoutActivity.class));
+                menuItem3.addLeaf(new Leaf("带预览的图片浏览器", "", GridViewActivity.class));
+                menuItem3.addLeaf(new Leaf("可展开的列表组件", "", ExpandableListViewActivity.class));
             }
 
             MenuItem menuItem4 = new MenuItem("提示", R.drawable.weixin_normal, R.drawable.weixin_pressed);
@@ -142,10 +157,7 @@ public class Config{
             MenuItem menuItem = new MenuItem("Android", R.drawable.weixin_normal, R.drawable.weixin_pressed);
             m2.addMenuItem(menuItem);
             {
-                menuItem.addLeaf(new Leaf("ViewPager", "", ViewPagerDemoActivity.class));
-                menuItem.addLeaf(new Leaf("Fragment", "", FragmentDemoActivity.class));
                 menuItem.addLeaf(new Leaf("Animation", "", AnimationDemoActivity.class));
-                menuItem.addLeaf(new Leaf("控件", "", UICodeMainActivity.class));
                 menuItem.addLeaf(new Leaf("EventBus", "", EventBusActivity.class));
                 menuItem.addLeaf(new Leaf("http", "", HttpMainActivity.class));
                 menuItem.addLeaf(new Leaf("通讯录", "", ContactsDemoActivity.class));

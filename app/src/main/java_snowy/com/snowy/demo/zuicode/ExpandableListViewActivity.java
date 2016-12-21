@@ -124,7 +124,7 @@ public class ExpandableListViewActivity extends BaseActivity {
             }
         };
 
-        ExpandableListView elv_list = (ExpandableListView) findViewById(R.id.elv_list);
+        ExpandableListView elv_list = findViewById(R.id.elv_list);
         elv_list.setAdapter(adapter);
     }
 }

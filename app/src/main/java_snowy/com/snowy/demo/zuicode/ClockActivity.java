@@ -1,6 +1,5 @@
 package com.snowy.demo.zuicode;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.View;
@@ -21,8 +20,8 @@ public class ClockActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ac_uicode_clock);
 
-        bt_clock = (Button) findViewById(R.id.bt_clock);
-        chronometer = (Chronometer) findViewById(R.id.chronometer);
+        bt_clock = findViewById(R.id.bt_clock);
+        chronometer = findViewById(R.id.chronometer);
 
         bt_clock.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -43,7 +43,7 @@ public class StreamLayoutActivity extends BaseActivity {
     }
 
     private void init() {
-        sv_streaml = (ScrollView) findViewById(R.id.sv_stream);
+        sv_streaml = findViewById(R.id.sv_stream);
 
         //用来盛放屏幕信息
         DisplayMetrics outMetrics = new DisplayMetrics();
@@ -51,9 +51,9 @@ public class StreamLayoutActivity extends BaseActivity {
         //设置每个LinearLayout的宽度为整个屏幕宽度的1/3
         imgvWidth = outMetrics.widthPixels / 3;
 
-        ll_stream1 = (LinearLayout) findViewById(R.id.ll_stream1);
-        ll_stream2 = (LinearLayout) findViewById(R.id.ll_stream2);
-        ll_stream3 = (LinearLayout) findViewById(R.id.ll_stream3);
+        ll_stream1 = findViewById(R.id.ll_stream1);
+        ll_stream2 = findViewById(R.id.ll_stream2);
+        ll_stream3 = findViewById(R.id.ll_stream3);
         lls[0] = ll_stream1;
         lls[1] = ll_stream2;
         lls[2] = ll_stream3;

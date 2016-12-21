@@ -1,9 +1,8 @@
 /*
  * Copyright (C) 20015 MaiNaEr All rights reserved
  */
-package com.snowy.demo.zhttp;
+package com.snowy.demo.zhttp.download;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,36 +10,34 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import com.cowthan.sample.BaseActivity;
 import com.cowthan.sample.R;
-import com.snowy.demo.zeventbus.EventBean;
-import com.snowy.okhttp.download.DownloadManager;
 
+import org.ayo.app.base.ActivityAttacher;
 import org.ayo.eventbus.EventBus;
 
 import java.io.File;
 
 /**
- * 类/接口描述
  *
- * @author wangjian
- * @date 2016/3/28.
  */
-public class DownLoadSencondActivity extends Activity implements View.OnClickListener {
-    private ProgressBar mProgressBar2;
-    private Button mButton2;
-    private Button mButtonPause2;
-    private Button mButtonCancel2;
-    private Button mButtonResume2;
-    private TextView mTvStatus2;
+public class DownLoadFirstActivity extends BaseActivity implements View.OnClickListener {
+    private ProgressBar mProgressBar;
+    private Button mButton;
+    private Button mButtonPause;
+    private Button mButtonCancel;
+    private Button mButtonResume;
+    private TextView mTvStatus;
 
-    private ProgressBar mProgressBar3;
-    private Button mButton3;
-    private Button mButtonPause3;
-    private Button mButtonCancel3;
-    private Button mButtonResume3;
-    private TextView mTvStatus3;
+    private ProgressBar mProgressBar1;
+    private Button mButton1;
+    private Button mButtonPause1;
+    private Button mButtonCancel1;
+    private Button mButtonResume1;
+    private TextView mTvStatus1;
+
+    private Button bt_download_tosencond;
 
     private static final String URL_360_ID = "url_360";
     private static final String URL_QQ_ID = "url_qq";
@@ -61,7 +58,7 @@ public class DownLoadSencondActivity extends Activity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ac_http_download2);
+        setContentView(R.layout.ac_http_download1);
         initView();
 
         EventBus.getDefault().register(this);
@@ -69,71 +66,78 @@ public class DownLoadSencondActivity extends Activity implements View.OnClickLis
 
     private void initView() {
         //----------第一组下载----------------
-        mProgressBar2 = (ProgressBar) findViewById(R.id.progressBar2);
-        mButton2 = (Button) findViewById(R.id.button2);
-        mButton2.setOnClickListener(this);
+        mProgressBar = findViewById(R.id.progressBar);
+        mButton = findViewById(R.id.button);
+        mButton.setOnClickListener(this);
 
-        mButtonPause2 = (Button) findViewById(R.id.buttonpause2);
-        mButtonPause2.setOnClickListener(this);
+        mButtonPause = findViewById(R.id.buttonpause);
+        mButtonPause.setOnClickListener(this);
 
-        mButtonCancel2 = (Button) findViewById(R.id.buttoncancel2);
-        mButtonCancel2.setOnClickListener(this);
+        mButtonCancel = findViewById(R.id.buttoncancel);
+        mButtonCancel.setOnClickListener(this);
 
-        mButtonResume2 = (Button) findViewById(R.id.buttonresume2);
-        mButtonResume2.setOnClickListener(this);
+        mButtonResume = findViewById(R.id.buttonresume);
+        mButtonResume.setOnClickListener(this);
 
-        mTvStatus2 = (TextView) findViewById(R.id.tv_status2);
+        mTvStatus = findViewById(R.id.tv_status);
 
         //-------------第二组下载--------------
 
-        mProgressBar3 = (ProgressBar) findViewById(R.id.progressBar3);
-        mButton3 = (Button) findViewById(R.id.button3);
-        mButton3.setOnClickListener(this);
+        mProgressBar1 = findViewById(R.id.progressBar1);
+        mButton1 = findViewById(R.id.button1);
+        mButton1.setOnClickListener(this);
 
-        mButtonPause3 = (Button) findViewById(R.id.buttonpause3);
-        mButtonPause3.setOnClickListener(this);
+        mButtonPause1 = findViewById(R.id.buttonpause1);
+        mButtonPause1.setOnClickListener(this);
 
-        mButtonCancel3 = (Button) findViewById(R.id.buttoncancel3);
-        mButtonCancel3.setOnClickListener(this);
+        mButtonCancel1 = findViewById(R.id.buttoncancel1);
+        mButtonCancel1.setOnClickListener(this);
 
-        mButtonResume3 = (Button) findViewById(R.id.buttonresume3);
-        mButtonResume3.setOnClickListener(this);
+        mButtonResume1 = findViewById(R.id.buttonresume1);
+        mButtonResume1.setOnClickListener(this);
 
-        mTvStatus3 = (TextView) findViewById(R.id.tv_status3);
+        mTvStatus1 = findViewById(R.id.tv_status1);
+
+        bt_download_tosencond = findViewById(R.id.bt_download_tosencond);
+        bt_download_tosencond.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        if (mButton2 == v) {
+        if (mButton == v) {
             download360();
         }
-        else if (mButtonCancel2 == v) {
+        else if (mButtonCancel == v) {
             startDownloadService(CANCEL, URL_360_ID, null, null);
         }
-        else if (mButtonPause2 == v) {
+        else if (mButtonPause == v) {
             startDownloadService(PAUSE, URL_360_ID, null, null);
         }
-        else if (mButtonResume2 == v) {
+        else if (mButtonResume == v) {
             startDownloadService(CONTINNUE, URL_360_ID, null, null);
         }
 
         //-----------------第二组下载
-        if (mButton3 == v) {
+        if (mButton1 == v) {
             downloadQQ();
         }
-        else if (mButtonCancel3 == v) {
+        else if (mButtonCancel1 == v) {
             startDownloadService(CANCEL, URL_QQ_ID, null, null);
         }
-        else if (mButtonPause3 == v) {
+        else if (mButtonPause1 == v) {
             startDownloadService(PAUSE, URL_QQ_ID, null, null);
         }
-        else if (mButtonResume3 == v) {
+        else if (mButtonResume1 == v) {
             startDownloadService(CONTINNUE, URL_QQ_ID, null, null);
+        }
+
+        if (bt_download_tosencond == v) {
+            ActivityAttacher.startActivity(getActivity(), DownLoadSencondActivity.class);
         }
     }
 
     private void download360() {
-        Log.i("download", "start to download 360 in second");
+        Log.i("download", "start to download 360");
         startDownloadService(START, URL_360_ID, url_360, "360safe.apk");
     }
 
@@ -142,12 +146,12 @@ public class DownLoadSencondActivity extends Activity implements View.OnClickLis
     }
 
     private void startDownloadService(int status, String urlQqId, String url_qq, String name) {
-        Intent service = new Intent(this, DownloadService.class);
+        Intent service = new Intent(getActivity(), DownloadService.class);
         service.putExtra("status", status);
         service.putExtra("id", urlQqId);
         service.putExtra("url", url_qq);
         service.putExtra("name", name);
-        startService(service);
+        getActivity().startService(service);
     }
 
     @Override
@@ -165,23 +169,23 @@ public class DownLoadSencondActivity extends Activity implements View.OnClickLis
                 String percent_downloading = event.getPercent();
                 switch (status) {
                     case DOWNLOADING:
-                        mProgressBar2.setProgress(Integer.parseInt(percent_downloading));
-                        mTvStatus2.setText("正在下载..." + percent_downloading + "%");
+                        mProgressBar.setProgress(Integer.parseInt(percent_downloading));
+                        mTvStatus.setText("正在下载..." + percent_downloading + "%");
                         break;
                     case PAUSE:
-                        mTvStatus2.setText("下载已暂停,已下载：" + percent_downloading + "%");
+                        mTvStatus.setText("下载已暂停,已下载：" + percent_downloading + "%");
                         break;
                     case CANCEL:
-                        mTvStatus2.setText("下载已取消");
-                        mProgressBar2.setProgress(0);
+                        mTvStatus.setText("下载已取消");
+                        mProgressBar.setProgress(0);
                         break;
                     case DOWNLOADSUCCESS:
                         File file = event.getFile();
-                        mTvStatus2.setText("下载完成 path：" + file.getAbsolutePath());
+                        mTvStatus.setText("下载完成 path：" + file.getAbsolutePath());
                         break;
                     case ERROR:
                         int errorCode = event.getErrorCode();
-                        mTvStatus2.setText("下载失败errorCode=" + errorCode);
+                        mTvStatus.setText("下载失败errorCode=" + errorCode);
                         break;
                 }
                 break;
@@ -189,23 +193,23 @@ public class DownLoadSencondActivity extends Activity implements View.OnClickLis
                 String percent = event.getPercent();
                 switch (status) {
                     case DOWNLOADING:
-                        mProgressBar3.setProgress(Integer.parseInt(percent));
-                        mTvStatus3.setText("正在下载..." + percent + "%");
+                        mProgressBar1.setProgress(Integer.parseInt(percent));
+                        mTvStatus1.setText("正在下载..." + percent + "%");
                         break;
                     case PAUSE:
-                        mTvStatus3.setText("下载已暂停,已下载：" + percent + "%");
+                        mTvStatus1.setText("下载已暂停,已下载：" + percent + "%");
                         break;
                     case CANCEL:
-                        mTvStatus3.setText("下载已取消");
-                        mProgressBar3.setProgress(0);
+                        mTvStatus1.setText("下载已取消");
+                        mProgressBar1.setProgress(0);
                         break;
                     case DOWNLOADSUCCESS:
                         File file = event.getFile();
-                        mTvStatus3.setText("下载完成 path：" + file.getAbsolutePath());
+                        mTvStatus1.setText("下载完成 path：" + file.getAbsolutePath());
                         break;
                     case ERROR:
                         int errorCode = event.getErrorCode();
-                        mTvStatus3.setText("下载失败errorCode=" + errorCode);
+                        mTvStatus1.setText("下载失败errorCode=" + errorCode);
                         break;
                 }
                 break;
