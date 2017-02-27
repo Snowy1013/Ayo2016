@@ -31,4 +31,8 @@
     <color name="color4">#ffff00</color>
     <color name="color5">#ff00ff</color>
     <color name="color6">#00ffff</color>
+
+    <color name="line">#ffd3dde6</color>
+    <color name="griditems_bg">#ffe8ecef</color>
+    <color name="commo_text_color">#ff333333</color>
 </resources>

@@ -8,7 +8,17 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="VariableValue">
+        <item name="android:textStyle">normal</item>
+    </style>
 
-
-
+    <style name="ActionBarTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <!-- toolbar（actionbar）颜色 -->
+        <item name="colorPrimary">#673AB7</item>
+        <!-- 窗口的背景颜色 -->
+        <item name="colorPrimaryDark">@android:color/holo_blue_bright</item>
+    </style>
 </resources>
+

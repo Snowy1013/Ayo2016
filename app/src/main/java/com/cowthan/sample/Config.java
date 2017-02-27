@@ -27,8 +27,10 @@ import com.snowy.demo.zdesignpattern.DesignPatternActivity;
 import com.snowy.demo.zdpm.DpmActivity;
 import com.snowy.demo.zeventbus.EventBusActivity;
 import com.snowy.demo.zfragment.FragmentDemoActivity;
+import com.snowy.demo.zgridview.GridViewMainActivity;
 import com.snowy.demo.zhttp.HttpMainActivity;
 import com.snowy.demo.zsocket.SocketDemoActivity;
+import com.snowy.demo.zsystembartint.SystemBarTintMainActivity;
 import com.snowy.demo.zuicode.ClockActivity;
 import com.snowy.demo.zuicode.DrawViewActivity;
 import com.snowy.demo.zuicode.ExpandableListViewActivity;
@@ -121,6 +123,7 @@ public class Config{
                 menuItem3.addLeaf(new Leaf("瀑布流", "", StreamLayoutActivity.class));
                 menuItem3.addLeaf(new Leaf("带预览的图片浏览器", "", GridViewActivity.class));
                 menuItem3.addLeaf(new Leaf("可展开的列表组件", "", ExpandableListViewActivity.class));
+                menuItem3.addLeaf(new Leaf("带分隔线的GridView", "", GridViewMainActivity.class));
             }
 
             MenuItem menuItem4 = new MenuItem("提示", R.drawable.weixin_normal, R.drawable.weixin_pressed);
@@ -164,6 +167,7 @@ public class Config{
                 menuItem.addLeaf(new Leaf("DevicePolicyManager", "", DpmActivity.class));
                 menuItem.addLeaf(new Leaf("Socket长连接", "", SocketDemoActivity.class));
 //                menuItem.addLeaf(new Leaf("RxJava", "", RxJavaDemoActivity.class));
+                menuItem.addLeaf(new Leaf("Android浸入式 ", "", SystemBarTintMainActivity.class));
             }
 
             menuItem = new MenuItem(" Java ", R.drawable.weixin_normal, R.drawable.weixin_pressed);

@@ -14,8 +14,6 @@ import android.view.View;
 import com.cowthan.sample.BaseActivity;
 import com.cowthan.sample.R;
 
-import java.io.InputStream;
-
 /**
  * 一个BitmapDrawable就是封装了一个位图。
  * 直接以文件的方式，就是封装了一个原始的位图。
@@ -34,8 +32,9 @@ public class D_BitmapDrawable extends BaseActivity {
 		setContentView(R.layout.activity_d__bitmap);
 		
 		//----代码创建1：
-		InputStream inputStream = getResources().openRawResource(R.drawable.animate_shower);
-		BitmapDrawable drawable = new BitmapDrawable(inputStream);
+//		InputStream inputStream = getResources().openRawResource(R.drawable.animate_shower);
+//		BitmapDrawable drawable = new BitmapDrawable(inputStream);
+        BitmapDrawable drawable = (BitmapDrawable) getResources().getDrawable(R.drawable.animate_shower);
 		Bitmap bitmap = drawable.getBitmap(); 
 		//利用Bitmap对象创建缩略图  
         bitmap = ThumbnailUtils.extractThumbnail(bitmap, 40, 40); 

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="HwPush_SDK_V2705">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/HwPush_SDK_V2705.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

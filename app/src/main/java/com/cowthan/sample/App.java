@@ -16,11 +16,16 @@ import org.ayo.app.AyoViewLib;
 public class App extends Application{
 
     public static Application app;
+    private static App mInstance;
 
+    public static App instance() {
+        return mInstance;
+    }
     @Override
     public void onCreate() {
         super.onCreate();
         app = this;
+        mInstance = this;
 
         //初始化Ayo SDK
         Ayo.init(this, "ayo", true, true);
@@ -42,5 +47,21 @@ public class App extends Application{
 
         //初始化okhttpconfig
         OkHttpUtils.initOkHttpConfig(this);
+    }
+
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+        System.gc();
+    }
+
+    @Override
+    public void onTerminate() {
+        super.onTerminate();
+        exit();
+    }
+
+    public void exit() {
+        System.exit(0);
     }
 }

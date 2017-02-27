@@ -6,6 +6,7 @@ import android.widget.Button;
 
 import com.cowthan.sample.BaseActivity;
 import com.cowthan.sample.R;
+import com.snowy.demo.zhttp.appstore.AppStoreActivity;
 import com.snowy.demo.zhttp.download.DownLoadFirstActivity;
 
 import org.ayo.app.base.ActivityAttacher;
@@ -32,6 +33,9 @@ public class HttpMainActivity extends BaseActivity implements View.OnClickListen
         switch (view.getId()) {
             case R.id.bt_http_download:
                 ActivityAttacher.startActivity(getActivity(), DownLoadFirstActivity.class);
+                break;
+            case R.id.bt_http_appstore:
+                ActivityAttacher.startActivity(getActivity(), AppStoreActivity.class);
                 break;
         }
     }

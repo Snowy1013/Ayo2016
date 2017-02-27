@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Android2016</string>
+    <string name="app_name">Ayo2016</string>
+    <string name="classify">"分类"</string>
+    <string name="allapps">"全部"</string>
 </resources>

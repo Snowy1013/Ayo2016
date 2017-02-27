@@ -204,7 +204,7 @@ class BrokenAnimator extends ValueAnimator{
     }
 
     /**
-     * Line to the the farthest boundary, in case appear a super big piece.
+     * line to the the farthest boundary, in case appear a super big piece.
      */
     private void buildFirstLine(LinePath path, Rect r){
         int[] range=new int[]{-r.left,-r.top,r.right,r.bottom};
