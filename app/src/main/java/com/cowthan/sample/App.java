@@ -5,7 +5,6 @@ import android.app.Application;
 import com.snowy.demo.zhttp.OkHttpUtils;
 
 import org.ayo.Ayo;
-import org.ayo.CrashHandler;
 import org.ayo.Logger;
 import org.ayo.VanGogh;
 import org.ayo.app.AyoViewLib;
@@ -42,8 +41,8 @@ public class App extends Application{
         VanGogh.init(this);
 
         //初始化全局异常处理
-        CrashHandler crashHandler = CrashHandler.getInstance();
-        Thread.setDefaultUncaughtExceptionHandler(crashHandler);
+//        CrashHandler crashHandler = CrashHandler.getInstance();
+//        Thread.setDefaultUncaughtExceptionHandler(crashHandler);
 
         //初始化okhttpconfig
         OkHttpUtils.initOkHttpConfig(this);

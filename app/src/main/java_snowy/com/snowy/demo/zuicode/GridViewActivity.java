@@ -23,10 +23,10 @@ public class GridViewActivity extends BaseActivity {
     private GridView gv_small_images;
     private ImageView iv_large_image;
     private int[] imageIds = new int[]{
-            R.drawable.cute1, R.drawable.cute2, R.drawable.cute3, R.drawable.cute4,
-            R.drawable.cute5, R.drawable.cute6, R.drawable.cute7, R.drawable.cute8,
-            R.drawable.cute9, R.drawable.cute10, R.drawable.cute11, R.drawable.cute12,
-            R.drawable.cute13, R.drawable.cute14, R.drawable.cute15, R.drawable.cute16
+            R.drawable.snowy_cute1, R.drawable.snowy_cute2, R.drawable.snowy_cute3, R.drawable.snowy_cute4,
+            R.drawable.snowy_cute5, R.drawable.snowy_cute6, R.drawable.snowy_cute7, R.drawable.snowy_cute8,
+            R.drawable.snowy_cute9, R.drawable.snowy_cute10, R.drawable.snowy_cute11, R.drawable.snowy_cute12,
+            R.drawable.snowy_cute13, R.drawable.snowy_cute14, R.drawable.snowy_cute15, R.drawable.snowy_cute16
     };
 
     @Override
